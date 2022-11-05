@@ -1,0 +1,41 @@
+// Custom template
+
+@font-face {
+    font-family:"icons";
+    src: url("../iconfont/icons.eot?cb099595fdcb77f0d0184691371979d6");
+    src: url("../iconfont/icons.eot?cb099595fdcb77f0d0184691371979d6#iefix") format("embedded-opentype"),
+		url("../iconfont/icons.woff?cb099595fdcb77f0d0184691371979d6") format("woff"),
+		url("../iconfont/icons.ttf?cb099595fdcb77f0d0184691371979d6") format("truetype"),
+		url("../iconfont/icons.svg?cb099595fdcb77f0d0184691371979d6#icons") format("svg");
+    font-weight:normal;
+    font-style:normal;
+    }
+
+.icon {
+    font-family:"icons";
+    display:inline-block;
+    font-style:normal;
+    speak:none;
+    -webkit-font-smoothing:antialiased;
+    font-size:1em;
+    line-height:1em;
+    vertical-align:baseline;
+    }
+ 
+// Icons
+.icon--arrow:before { content:"\f101"; }
+.icon--certificat:before { content:"\f102"; }
+.icon--close:before { content:"\f103"; }
+.icon--donation:before { content:"\f104"; }
+.icon--facebook:before { content:"\f105"; }
+.icon--fish:before { content:"\f106"; }
+.icon--gift:before { content:"\f107"; }
+.icon--instagram:before { content:"\f108"; }
+.icon--linkedin:before { content:"\f109"; }
+.icon--logo-small:before { content:"\f10a"; }
+.icon--logo:before { content:"\f10b"; }
+.icon--menu-arrow:before { content:"\f10c"; }
+.icon--play:before { content:"\f10d"; }
+.icon--twitter:before { content:"\f10e"; }
+.icon--wave:before { content:"\f10f"; }
+.icon--youtube:before { content:"\f110"; }

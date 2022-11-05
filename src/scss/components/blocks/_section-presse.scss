@@ -1,0 +1,142 @@
+/* -------------------------------
+   PRESSE SECTION COMPONENTS
+   --
+   Mobile First !
+------------------------------- */
+
+.cg-section-presse{
+	
+	&.section-light-blue{
+		
+		.blocs-container{
+			
+			.bloc-presse{
+				border: 3px solid $colorwhite;
+			}
+
+		}
+		
+	}
+
+	.blocs-container{
+		
+		.bloc-presse{
+			position: relative;
+			border: 3px solid $colorgrey;
+			border-radius: 9px;
+			padding: 20px;
+    		margin: 0 0 20px 0;
+			
+			.presse-title{
+				text-align: center;
+				font-family: $fonttitle;
+				font-size: 20px;
+				line-height: 32px;
+				display: block;
+				
+				img{
+					width: 50px;
+					height: 50px;
+					border-radius: 50px;
+					display: block;
+					margin: 0 auto;
+					margin-bottom: 10px;
+				}
+
+			}
+
+			.presse-desc{
+				position: relative;
+				font-size: 16px;
+				line-height: 20px;
+				display: block;
+				padding-top: 15px;
+				margin-top: 15px;
+				text-align: center;
+
+				&:before{
+					font-family:"icons";
+					content:"\f10c";
+					font-size: 30px;
+					position: absolute;
+					top: -10px;
+					left: 50%;
+					margin-left: -15px
+				}
+
+			}
+
+		}
+		
+	}
+	
+}
+
+/* -------------------------------
+   SMALL SCREENS
+------------------------------- */
+
+@media (min-width: $screen-sm-min) {
+
+	.cg-section-presse{
+
+		.blocs-container{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			.bloc-presse{
+				width: 48%;
+				padding: 20px;
+				margin: 0 1% 20px 1%;
+
+				.presse-title{
+					display: flex;
+					align-items: center;
+					font-size: 22px;
+					line-height: 25px;
+					text-align: left;
+
+					img{
+						margin: 0 10px 0 0;
+					}
+
+				}
+				
+				.presse-desc{
+					text-align: left;
+
+					&:before{
+						left: 0%;
+						margin-left: 0
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/* -------------------------------
+   MEDIUM SCREENS
+------------------------------- */
+
+@media (min-width: $screen-md-min) {
+
+	.cg-section-presse{
+
+		.blocs-container{
+			
+			.bloc-presse{
+				width: 23%;
+			}
+
+		}
+
+	}
+
+}

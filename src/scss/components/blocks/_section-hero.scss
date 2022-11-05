@@ -1,0 +1,140 @@
+/* -------------------------------
+   HERO SECTION COMPONENTS
+   --
+   Mobile First !
+------------------------------- */
+
+.cg-section-hero{
+	padding:120px 15px;
+	text-align: center;
+	color: $colorwhite;
+	position: relative;
+	
+	.hero-content{
+		
+		.hero-title{
+			font-size: 24px;
+			letter-spacing: 4.25px;
+			line-height: 34px;
+			margin-bottom: 30px;
+		}
+
+		.intro-txt{	
+			font-weight: 700;
+			margin-bottom: 0,
+		}
+		
+		.hero-form{
+			
+			.hero-form-right{
+				margin: 30px 0 0 0;
+			}
+			
+		}
+		
+	}
+	
+}
+
+/* -------------------------------
+   SMALL SCREENS
+------------------------------- */
+
+@media (min-width: $screen-sm-min) {
+
+	.cg-section-hero{
+
+		.hero-content{
+
+			.hero-title{
+				font-size: 40px;
+				line-height: 65px;
+				margin-bottom: 40px;
+			}
+			
+		}
+
+	}
+
+}
+
+
+/* -------------------------------
+   MEDIUM SCREENS
+------------------------------- */
+
+@media (min-width: $screen-md-min) {
+
+	.cg-section-hero{
+		
+		.hero-content{
+
+			.hero-form{
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+
+				.hero-form-left{
+					width: 50%;
+					text-align: left;
+					padding: 0 30px 0 0;
+
+					.intro-txt{
+						text-align: left;
+						margin: 0;
+					}
+
+				}
+
+				.hero-form-right{
+					width: 50%;
+					margin: 0;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/* -------------------------------
+   LARGE SCREENS
+------------------------------- */
+
+@media (min-width: $screen-lg-min) {
+
+	.cg-section-hero{
+		
+		.hero-content{
+
+			.hero-form{
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+
+				.hero-form-left{
+					width: 50%;
+					text-align: left;
+					padding: 0 30px 0 0;
+
+					.intro-txt{
+						text-align: left;
+						margin: 0;
+					}
+
+				}
+
+				.hero-form-right{
+					width: 50%;
+					margin: 0;
+				}
+
+			}
+
+		}
+
+	}
+
+}

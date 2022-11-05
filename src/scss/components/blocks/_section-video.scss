@@ -1,0 +1,119 @@
+/* -------------------------------
+   VIDEO SECTION COMPONENTS
+   --
+   Mobile First !
+------------------------------- */
+
+.cg-section-video{
+
+	.video-container{
+		position: relative;
+		
+		.video-cover{
+			background-size: cover;
+			margin:0;
+			height:300px;
+			width:100%;
+			position:relative;
+			opacity:1;
+			transition: all .3s cubic-bezier(.215,.61,.355,1);
+			z-index:6;
+			visibility:visible;
+
+			&.video-cover-none{
+				opacity:0;
+				visibility:hidden;
+			}
+
+		}
+
+		iframe{
+			height:300px;
+			width: 100%;
+			position:absolute;
+			top:0;
+			left:0;
+			z-index: 2;
+		}
+
+		.video-player i {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			color: $darkblue;
+			font-size: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index:8;
+			cursor:pointer;
+			width:60px;
+			height:60px;
+			border-radius:50%;
+			background-color:$colorwhite;
+			padding: 9px;
+			margin:-30px 0 0 -30px;
+			transform: scale(1);
+			transition:all .25s cubic-bezier(.694,.048,.335,1) .15s;
+
+			&:hover{
+				transform: scale(1.2);
+			}
+
+		}
+
+	}
+	
+}
+
+/* -------------------------------
+   SMALL SCREENS
+------------------------------- */
+
+@media (min-width: $screen-sm-min) {
+
+	.cg-section-video{
+
+		.video-container{
+
+			.video-cover{
+				height:406px;
+			}
+
+			iframe{
+				height:406px;
+			}
+
+		}
+
+	}
+
+}
+
+/* -------------------------------
+   MEDIUM SCREENS
+------------------------------- */
+
+@media (min-width: $screen-md-min) {
+
+	.cg-section-video{
+
+		.video-container{
+
+			.video-cover{
+				width: 888px;
+			    margin: 0 auto;
+			}
+
+			iframe{
+				width: 888px;
+				left: 50%;
+				margin-left: -444px;
+				width: 885px;
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,54 @@
+/* -------------------------------
+   PARTNERS SECTION COMPONENTS
+   --
+   Mobile First !
+------------------------------- */
+.cg-section-partner{
+		
+	.slick-slide{
+		position: relative;
+		
+		.bloc-partner{
+			display: block;
+			text-align: center;
+			height: 100px;
+			padding: 0 0 15px 0;
+			
+			.partner-pic{
+				width: 80%;
+				height: 80%;
+				object-fit: contain;
+				object-position: center;
+				margin: 0 auto;
+				transition: all .5s cubic-bezier(.85,0,.15,1);
+			}
+			
+			.partner-title{
+				color: $colorblack;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+/* -------------------------------
+   SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min) {
+
+	.cg-section-partner{
+
+		.slick-slide{
+
+			.bloc-partner{
+				
+				&:hover{
+
+					.partner-pic{
+						opacity: 0.8;
+					}
+				}
+			}		
+		}
+	}
+}

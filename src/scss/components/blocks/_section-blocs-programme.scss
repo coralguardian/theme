@@ -1,0 +1,158 @@
+/* -------------------------------
+   BLOCS PROGRAMM SECTION COMPONENTS
+   --
+   Mobile First !
+------------------------------- */
+
+.cg-section-blocs-programme{
+	
+	&.cg-section {
+    	padding: 50px 15px 20px 15px;
+	}
+	
+	&.section-blue{
+		
+		.bloc-programme{
+			color: $colorblack;
+		}
+		
+	}
+	
+	.blocs-container{
+		
+		.bloc-programme{
+			background: $colorwhite;
+			border: 1px dashed $colorblack;
+			
+			&.bloc-progamme-pic{
+				color: $colorwhite;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				
+				.cg-ghost-link{
+					z-index: 6;
+				}
+				
+			}
+			
+			.progamme-year{
+				font-size: 16px;
+				text-decoration: underline;
+			}
+			
+			.progamme-desc{
+				font-size: 14px;
+			}
+
+		}
+		
+	}
+	
+}
+
+/* -------------------------------
+   SMALL SCREENS
+------------------------------- */
+
+@media (min-width: $screen-sm-min) {
+
+	.cg-section-blocs-programme{
+
+		&.cg-section {
+			padding: 80px 0 30px 0;
+		}
+
+		.blocs-container{
+			flex-wrap: wrap;
+			
+			.bloc-programme{
+				margin: 0 50px 50px 0;
+
+				&:nth-child(2n){
+					margin: 0 0 50px 0;
+				}
+				
+			}
+			
+			&.size-medium,
+			&.size-full,
+			&.size-small{
+				
+				.bloc-programme{
+				    width: 46.5%;
+				}
+				
+			}
+			
+		}
+
+	}
+	
+}
+
+/* -------------------------------
+   MEDIUM SCREENS
+------------------------------- */
+
+@media (min-width: $screen-md-min) {
+
+	.cg-section-blocs-programme{
+
+		.blocs-container{
+
+			&.size-medium,
+			&.size-full,
+			&.size-small{
+				
+				.bloc-programme{
+				    width:47.3%;
+				}
+				
+			}
+			
+		}
+
+	}
+	
+}
+
+/* -------------------------------
+   LARGE SCREENS
+------------------------------- */
+
+@media (min-width: $screen-lg-min) {
+
+	.cg-section-blocs-programme{
+
+		.blocs-container{
+			
+			&.size-full{
+				
+				.bloc-programme{
+				    width:47.7%;
+				}
+				
+			}
+			
+			&.size-medium{
+				
+				.bloc-programme{
+				    width:46.7%;
+				}
+				
+			}
+			
+			&.size-small{
+				
+				.bloc-programme{
+				    width:45.4%;
+				}
+				
+			}
+			
+		}
+
+	}
+	
+}

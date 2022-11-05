@@ -1,0 +1,132 @@
+/* -------------------------------
+   MICRO COPONENT FOR GLOBAL SECTIONS
+   --
+   Mobile First !
+------------------------------- */
+
+.cg-section{
+	padding: 50px 15px;
+	overflow: hidden;
+	
+	&.section-white{
+
+		.slick-dots{
+			
+			li{
+
+				button{
+					background:$colorgrey;
+				}
+				
+				&.slick-active{
+			
+					button{
+						background:$lightgreen;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+	
+	&.section-dark-blue{
+		background: $darkblue;
+		color: $colorwhite;
+		
+		.listing-articles{
+			
+			.bloc-article{
+				color: $colorblack;
+			}
+			
+		}
+		
+		.cg-accordeon-content{
+			color: $darkblue;
+		}
+		
+		.donnees-txt{
+			color: $darkblue;
+		}
+		
+	}
+	
+	&.section-light-blue{
+		background: $lightblue;
+	}
+	
+	&.cg-marge-top-none{
+		padding-top:0;
+	}
+	
+	&.cg-marge-top-small{
+		padding-top:25px;
+	}
+	
+	
+	&.cg-marge-bot-none{
+		padding-bottom:0;
+	}
+	
+	&.cg-marge-bot-small{
+		padding-bottom:25px;
+	}
+	
+}
+
+/* -------------------------------
+   SMALL SCREENS
+------------------------------- */
+
+@media (min-width: $screen-sm-min) {
+	
+	.cg-section{
+		padding: 80px 0;
+		
+		&.cg-marge-top-none{
+			padding-top:0;
+		}
+
+		&.cg-marge-top-small{
+			padding-top:40px;
+		}
+
+
+		&.cg-marge-bot-none{
+			padding-bottom:0;
+		}
+
+		&.cg-marge-bot-small{
+			padding-bottom:40px;
+		}
+		
+		&.section-dark-blue{
+			
+			.cg-onglets-container {
+
+				.cg-onglets {
+					
+					.cg-onglet_title{
+						
+						.active{
+							color: $colorwhite;
+						}
+						
+						&:hover {
+							color: $lightblue;
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+
+	}
+	
+}

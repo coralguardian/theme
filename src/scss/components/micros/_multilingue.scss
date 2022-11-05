@@ -1,0 +1,151 @@
+/* -------------------------------
+   MICRO COMPONENT FOR LANGUAGE SELECTOR
+   --
+   Mobile First !
+------------------------------- */
+
+header{
+	
+	.responsive-menu{
+		
+		.wpml-ls-legacy-dropdown a:hover, .wpml-ls-legacy-dropdown a:focus, .wpml-ls-legacy-dropdown .wpml-ls-current-language:hover>a {
+			color: $colorwhite;
+		}
+		
+		.wpml-ls-sidebars-language-selector{
+		    margin: 0 auto;
+			
+			ul{
+			
+				li {
+					
+					&.wpml-ls-item{
+						box-shadow: 0px 0px 0px 2px #fff inset;
+						font-weight: 700;
+						padding: 3px;
+						
+						a{
+							padding: 4px 0;
+							background-color: rgba(255, 255, 255, 0);
+						    border: none;
+							font-size: 16px;
+							
+							&:after{
+								right: -21px;
+							    font-size: 12px;
+							}
+							
+						}
+						
+						ul{
+							border-top: none;
+							
+							li{
+								box-shadow: none;
+								background: $colorwhite;
+								width: 12.1em;
+								margin: 0 auto;
+								border-radius: 0;
+								
+								a{
+									color: $darkblue;
+								}
+								
+							}
+							
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+/* -------------------------------
+   LARGE SCREENS
+------------------------------- */
+
+@media (min-width: $screen-lg-min) {
+	
+	header{
+
+		nav{
+
+			.main-menu{
+
+				li{
+
+					&.wpml-ls-item{
+
+						a{
+							color:$darkblue;
+							padding: 0;
+
+							&:after{
+								font-family:"icons";
+								content:"\f101";
+								position: absolute;
+								top: -5px;
+								right: -14px;
+								font-size: 12px;
+								transition: all .3s cubic-bezier(.85,0,.15,1);
+							}
+							
+							.wpml-ls-flag{
+								margin: 0 10px 0 0;
+							}
+
+						}
+
+						&:hover{
+
+							a{
+
+								&:after{
+									top: 0px;
+								}
+
+							}
+
+						}
+						
+						.sub-menu{
+							width: 100px;
+							left: -10px;
+							
+							li {
+								width: auto;
+
+								a{
+									padding: 10px;
+									
+									&:after{
+										display: none;
+									}
+
+									&:hover{
+										color: $darkblue;
+									}
+
+								}
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+	
+}

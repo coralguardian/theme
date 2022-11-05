@@ -1,0 +1,85 @@
+/* -------------------------------
+   SLIDER SECTION COMPONENTS
+   --
+   Mobile First !
+------------------------------- */
+
+.cg-section-slider{
+	
+	.slider-container{
+		
+		.slick-slide{
+			height: 300px;
+			color: $colorwhite;
+			
+			&.slick-slide>div{
+				height: 100%;
+			}
+			
+			.slider-pic{
+				display: flex !important;
+				align-items: flex-end;
+				height: 100%;
+				
+				.slider-pic-content{
+					display: flex;
+					text-align: center;
+					flex-direction: column;
+					padding: 0 30px 60px 30px;
+					
+					.slider-pic-title{
+						font-size: 20px;
+						line-height: 32px;
+						font-weight: 700;
+						width: 100%;
+						margin-bottom: 20px;
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+		.slick-dots{
+			bottom: 30px;
+			position: absolute;
+		}
+		
+	}
+	
+}
+
+/* -------------------------------
+   MEDIUM SCREENS
+------------------------------- */
+
+@media (min-width: $screen-md-min) {
+
+	.cg-section-slider{
+
+		.slider-container{
+
+			.slick-slide{
+				height: 540px;
+
+				.slider-pic{
+
+					.slider-pic-content{
+						padding: 0 180px 90px 180px;
+
+						.slider-pic-title{
+							font-size: 32px;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+	
+}

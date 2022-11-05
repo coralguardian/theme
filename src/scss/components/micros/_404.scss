@@ -1,0 +1,80 @@
+/* -------------------------------
+   MICRO COMPONENT FOR 404 page
+   --
+   Mobile First !
+------------------------------- */
+
+.cg-page-404{
+	background:url(../img/coral-guardian-bg-404.jpg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 150px 0;
+	
+	.page-404-content{
+		background: $colorwhite;
+		padding: 30px;
+		border-radius: 9px;
+		width: 90%;
+		position: relative;
+		z-index: 3;
+		
+		.intro-txt{
+			margin-bottom: 0px;
+		}
+		
+	}
+	
+	#svg{
+		display: none;
+	}
+	
+}
+
+/* -------------------------------
+   SMALL SCREENS
+------------------------------- */
+
+@media (min-width: $screen-sm-min) {
+
+	.cg-page-404{
+
+		.page-404-content{
+			width: 70%;
+			padding: 50px;
+		}
+
+	}
+
+}
+
+/* -------------------------------
+   LARGE SCREENS
+------------------------------- */
+
+@media (min-width: $screen-lg-min) {
+	
+	.cg-page-404{
+		background:none;
+		
+		.page-404-content{
+			width: 50%;
+		}
+
+		#svg {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -5%;
+			width: 110%;
+			height:130vh;
+			z-index: 1;
+		}
+
+		#background {
+			filter: url("#disFilter");
+		}
+
+	}
+	
+}

@@ -1,0 +1,80 @@
+$bgColor:#020438;
+$boxColor:#020438;
+$waterFColor:#4D6DE3;
+$waterBColor:#C7EEFF;
+
+.loader{
+	background: $darkblue;
+	height: 100vh;
+	width: 100%;
+	top: 0;
+	position: fixed;
+    z-index: 999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.loader-box{
+	 
+		.percent{
+			font-family: $fonttitle;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index:3;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items:center;
+			justify-content:center; 
+			color:$colorwhite;
+			font-size:80px;
+		} 
+		
+		.water{
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index:2;
+			width: 100%;
+			height: 100%;
+			transform:translate(0,100%);
+			background:#99bbc9;
+			transition: all .2s;
+		  
+			&_wave{
+				width: 200%;
+				position: absolute;
+				bottom: 100%;
+				
+				&_back {
+					right: 0;
+					fill: $lightblue;
+					animation: anim-wave-bot 1.4s infinite linear;
+				}
+				
+				&_front {
+					left: 0;
+					fill: #99bbc9;
+					margin-bottom: -1px;
+					animation: anim-wave-top .7s infinite linear;
+				}
+				
+			}
+		
+		}
+	}
+	
+	@keyframes anim-wave-top {
+		100% {
+			transform: translate(-50%, 0);
+		}
+	}
+
+	@keyframes anim-wave-bot {
+		100% {
+			transform: translate(50%, 0);
+		}
+	}
+	
+}

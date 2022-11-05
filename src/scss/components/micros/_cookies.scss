@@ -1,0 +1,76 @@
+/* -------------------------------
+   COOKIES MICRO COMPONENT
+   --
+   Mobile First !
+------------------------------- */
+
+#cookieChoiceInfo{
+    background: $colorwhite;
+    color: $darkblue;
+    width: calc(100% - 60px);
+    border-radius: 10px;
+    left: 30px;
+    bottom: 20px;
+	box-shadow: 0px 0px 17px -1px #d2d2d2;
+	font-size: 14px;
+	
+	&:before{
+		content: 'Salut c\'est nous... les Cookies !';
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		font-size: 23px;
+	}
+	
+	span{
+		padding: 52px 80px 20px 20px;
+		border-bottom: 1px solid #f1f1f1;
+		width: 100%;
+		display: block;
+	}
+	
+	a{
+		width: 50%;
+		display: inline-block;
+		margin: 0;
+		text-align: center;
+		padding: 15px 0;
+		color: $darkblue;
+		font-weight: bold;
+		z-index: 3;
+    	position: relative;
+		
+		&#cookies-button{
+			border-right: 1px solid #f1f1f1;
+			color: $darkblue;
+		}
+		
+	}
+	
+}
+
+/* -------------------------------
+   SMALL SCREENS
+------------------------------- */
+
+@media (min-width: $screen-sm-min) {
+
+	#cookieChoiceInfo{
+		width: 420px;
+		left: 20px;
+		
+		&:after{
+			content: '';
+			background: url("../img/cookies-min.png") no-repeat;
+			width: 200px;
+			height: 207px;
+			position: absolute;
+			top: -40px;
+			right: -20px;
+			background-size: 48%;
+			background-position: right top;
+		}
+
+	}
+
+}

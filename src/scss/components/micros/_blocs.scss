@@ -1,0 +1,95 @@
+/* -------------------------------
+   MICRO COMPONENT FOR BLOCS STYLES
+   --
+   Mobile First !
+------------------------------- */
+
+.blocs-container{
+	
+	.current-bloc{
+		padding: 20px;
+		width: 100%;
+		text-align: center;
+		margin: 0 0 30px 0;
+		position: relative;
+		
+		.bloc-title{
+			display: block;
+			width: 100%;
+			font-size: 20px;
+			line-height: 32px;
+			font-family: $fonttitle ;
+		}
+
+		img{
+			margin: 0 auto;
+		}
+		
+		.bloc-number{
+			color: $colorwhite;
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			font-weight: bold;
+			font-size: 30px;
+			background: $darkblue;
+			margin: auto;
+			border-radius: 60px;
+			display: block;
+			margin-bottom: 20px;
+		}
+
+		&.white{
+			background: $colorwhite;
+		}
+
+		&.light-blue{
+			background: $lightblue;
+		}
+
+		&.dark-blue{
+			background: $darkblue;
+		}
+
+	}
+	
+}
+
+/* -------------------------------
+   SMALL SCREENS
+------------------------------- */
+
+@media (min-width: $screen-sm-min) {
+
+	.blocs-container{
+		display: flex;
+		
+		&.top{
+			align-items: baseline;
+		}
+		
+		&.center{
+			align-items: stretch;
+		}
+		
+		.current-bloc{
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+		    justify-content: center;
+			margin: 0 15px 30px 15px;
+			
+			.bloc-pic{
+				margin: 0 0 20px 0;
+			}
+			
+			.bloc-title{
+				font-size: 22px;
+				line-height: 32px;
+			}
+			
+		}
+		
+	}
+
+}

@@ -1,0 +1,63 @@
+/******************************************************************
+Author: Creative Bones
+******************************************************************/
+
+/*********************
+IMPORTING PARTIALS
+*********************/
+
+@import "partials/bootstrap";
+@import "partials/variables";
+@import "partials/icons";
+@import "partials/animations";
+@import "partials/slick";
+
+/*********************
+IMPORTING COMPONENTS
+*********************/  
+ 
+@import "components/structure/base";
+@import "components/structure/header";
+@import "components/structure/footer";
+@import "components/structure/archive";
+@import "components/structure/single";
+
+
+@import "components/micros/typography";
+@import "components/micros/buttons";
+@import "components/micros/cookies";
+@import "components/micros/bloc-actu";
+@import "components/micros/blocs";
+@import "components/micros/pagination";
+@import "components/micros/search";
+@import "components/micros/social-share";
+@import "components/micros/slick";
+@import "components/micros/wavy";
+@import "components/micros/404";
+@import "components/micros/onglets";
+@import "components/micros/accordion";
+@import "components/micros/sections";
+@import "components/micros/connexion";
+@import "components/micros/multilingue";
+@import "components/micros/loader";
+@import "components/micros/form";
+
+
+@import "components/blocks/section-hero";
+@import "components/blocks/section-relation";
+@import "components/blocks/section-video";
+@import "components/blocks/section-simple-txt";
+@import "components/blocks/section-blocs";
+@import "components/blocks/section-txt-img";
+@import "components/blocks/section-blocs-chiffres-cle";
+@import "components/blocks/section-onglets";
+@import "components/blocks/section-featured";
+@import "components/blocks/section-blocs-programme";
+@import "components/blocks/section-partenaires";
+@import "components/blocks/section-team";
+@import "components/blocks/section-adoption";
+@import "components/blocks/section-slider";
+@import "components/blocks/section-donnees";
+@import "components/blocks/section-newsletter";
+@import "components/blocks/section-map";
+@import "components/blocks/section-presse";

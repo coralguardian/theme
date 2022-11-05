@@ -1,0 +1,161 @@
+/* -------------------------------
+   SECTION FEATURED COMPONENTS
+   --
+   Mobile First !
+------------------------------- */
+
+.cg-section-featured{
+	
+	.cg-featured{
+		padding: 20px 20px 15px 20px;
+		text-align: center;
+		
+		&.featured-blue{
+			background: $lightblue;
+			
+			.featured-surtitre{
+				
+				&:after{
+					background: $colorblack;
+				}
+
+			}
+			
+			.blocs-container{
+			
+				.bloc{
+					
+					.featured-round{
+						background-color: $darkblue;
+					
+					}
+
+				}
+
+			}
+			
+		}
+
+		&.featured-white{
+			background-color: $colorwhite;
+			
+			.featured-surtitre{
+				
+				&:after{
+					background: $colorblack;
+				}
+
+			}
+			
+			.blocs-container{
+			
+				.bloc{
+					
+					.featured-round{
+						background-color: $darkblue;
+					
+					}
+
+				}
+
+			}
+			
+		}
+
+		&.featured-darkblue{
+			background: $darkblue;
+			color: $colorwhite;
+		}
+		
+		.featured-surtitre{
+			display: block;
+			margin-bottom: 30px;
+			font-size: 16px;
+			padding-bottom: 15px;
+			position: relative;
+			
+			&:after{
+				content: '';
+				background: $colorwhite;
+				width: 48px;
+				height: 1px;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				margin-left: -24px;
+			}
+			
+		}
+		
+		.featured-title{
+			display: block;
+			font-family: $fonttitle;
+			font-size: 26px;
+			line-height: 36px;
+		}
+		
+		.blocs-container{
+			display: flex;
+			justify-content: space-between;
+			margin-top: 25px;
+			flex-wrap: wrap;
+			
+			.bloc{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				flex-direction: column;	
+				position: relative;
+				width: 100%;
+				padding: 25px 0 25px 0;
+				
+				.featured-round{
+					width: 20px;
+					height: 20px;
+					background-color: $colorwhite;
+					border-radius: 50%;
+					position: absolute;
+					top: 0;
+					left: 50%;
+					margin-left: -10px;
+				}
+				
+				.bloc-txt{
+					font-size: 14px;
+					line-height: 20px;
+				}
+
+			}
+
+		}
+		
+	}
+	
+}
+
+/* -------------------------------
+   SMALL SCREENS
+------------------------------- */
+
+@media (min-width: $screen-sm-min) {
+	
+	.cg-section-featured{
+
+		.cg-featured{
+			padding: 20px 20px 40px 20px;
+
+			.blocs-container{
+				flex-wrap: nowrap;
+
+				.bloc{
+					padding: 50px 0 0 0;
+
+				}
+
+			}
+
+		}
+
+	}
+	
+}

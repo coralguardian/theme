@@ -1,0 +1,84 @@
+input,
+textarea{
+	height: 50px;
+	border-radius: 6px;
+	background-color: $colorwhite;
+	color: $darkblue;
+	border: none;
+	padding: 0 12px;
+	box-shadow: 0px 0px 0px 2px $lightblue inset;
+	width: 100%;
+	transition: all .5s cubic-bezier(.85,0,.15,1);
+}
+	
+input:focus,
+textarea:focus{
+	box-shadow: 0px 0px 0px 2px $darkblue inset;
+}
+	
+input[type=submit]{
+	box-shadow: none;
+	background: $darkblue;
+	color: $colorwhite;
+	cursor: pointer;
+	transition: all .5s cubic-bezier(.85,0,.15,1);
+		
+	&:hover{
+		color: $darkblue;
+		background: $lightblue;
+	}
+		
+}
+
+input[type=checkbox]{
+	width: 20px;
+    height: 20px;
+}
+	
+textarea{
+	height: 140px;
+	resize: none;
+}
+
+::-webkit-input-placeholder {
+	color:$darkblue;
+}
+
+::-moz-placeholder {
+	color: $darkblue;
+}
+
+:-ms-input-placeholder {
+	color: $darkblue;
+}
+
+:-moz-placeholder { 
+	color: $darkblue;
+}
+
+.wpcf7-list-item {
+	display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+	
+	input[type=radio],
+	input[type=checkbox]{
+		background: none;
+		box-shadow: none;
+		width: 24px;
+		height: 24px;
+		margin: 0 15px 0 0;
+	}
+	
+}
+
+.input-checkbok{
+
+	.wpcf7-list-item {
+		flex-direction: row;
+	    justify-content: flex-start;
+	}
+	
+}
+
