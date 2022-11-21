@@ -1,39 +1,27 @@
 /* -------------------------------
-   SECTION DONNEES COMPONENT
-   --
-   Mobile First !
+SECTION DONNEES COMPONENT
 ------------------------------- */
+.cbo-sectiondonnes{
+	background: $lightblue;
 
-.cg-section-donnes{
-	
 	.cg-onglets-container{
 		display: block;
-		
+
 		.cg-onglets{
-			
 			.cg-onglets-inner{
-				position: relative;
 				display: flex;
 				justify-content: center;
-				
+
 				.cg-onglet_title{
-					color: $colorgrey;
-					z-index: 4;
-				    padding: 0 15px;
+					color: $colorwhite;
 					font-weight: bold;
-					transition: .5s $easeinout;
-				
+
 					&.active{
 						color: $currentblue;
 					}
-					
-				}
-				
-				
+				}				
 			}
-			
 		}
-		
 		.donnees-container{
 			visibility: visible;
 			opacity: 1;
@@ -52,7 +40,6 @@
 				line-height: 100%;
 				text-align: center;
 			}
-			
 			.donnees-txt{
 				font-size: 1rem;
 				line-height: 1.5;
@@ -62,30 +49,23 @@
 				p{
 					text-align: center;
 				}
-				
-				
 				strong{
 					color: $darkblue;
 				}
-				
 			}
-			
 			.svg-container{
 				position: relative;
-				
+				margin-bottom: -48px;
+
 				svg{
-					
 					.graph-line{
 						fill:$darkblue;
 					}
-					
 					.small-line{
 						fill:none;
 						stroke:$colorgrey;
 					}
-					
 				}
-				
 				.chart-container{
 					display: flex;
 					position: absolute;
@@ -109,7 +89,6 @@
 						&.active{
 							opacity: 1;
 						}
-
 						.bar-chart-container{
 							display: flex;
 							align-items: baseline;
@@ -129,55 +108,46 @@
 									background: $currentblue;
 									color:  $currentblue;;
 								}
-
 								&:last-child{
 									background: $darkblue;
 									color: $darkblue;
 								}
-
 								span{
 									position: absolute;
 									top: -30px;
 								}
-
 							}
-
 						}
-
 					}
-
 				}
-
 			}
-			
 		}
-		
 	}
-	
 }
-
 /* -------------------------------
-   SMALL SCREENS
+SMALL SCREENS
 ------------------------------- */
-
 @media (min-width: $screen-sm-min) {
-
-	.cg-section-donnes{
-
+	.cbo-sectiondonnes{
 		.cg-onglets-container{
 			display: flex;
+			justify-content: space-between;
 
 			.cg-onglets{
-				height: 400px;
-				flex: none;
 				width: 55%;
 				margin-bottom: 0;
 
 				.cg-onglets-inner{
 					width: 100%;
-					padding:82% 0 0;
+					position: relative;
+					justify-content: space-around;
 
 					.cg-onglet_title{
+						display: flex;
+						flex-direction: column-reverse;
+						padding: 0 10px 10px 10px;
+						position: relative;
+						z-index: 3;
 
 						&:after{
 							content:'';
@@ -186,120 +156,72 @@
 							width: 100%;
 							position: absolute;
 							left: 0;
-							bottom: 24px;
+							bottom: 40px;
 							border-radius: 60px;
 							transition: .5s $easeinout;
 						}
-
 						&.active{
 							color: $lightgreen;
-
 							&:after{
 								background:$lightgreen;
 							}
-
 						}
-
 					}
-
 					.onglet-pic{
 						position: absolute;
 						top: 0;
 						left: 0;
 						width: 100%;
-						height: 400px;
+						height: 100%;
 						opacity: 0;
+						border-radius: 10px;
+						overflow: hidden;
 						transition: .5s $easeinout;
 
 						&.active{
 							opacity: 1;
 						}
-
 					}
-
 				}
-
 			}
-
 			.donnees-container{
 				width: 40%;
-				margin-left: 5%;
 				
 				.svg-container{
-					
 					.chart-container{
 						bottom: 21%;
 					}
-
 				}
-
 			}
-
 		}
-
 	}
-
 }
-
 /* -------------------------------
-   MEDIUM SCREENS
+MEDIUM SCREENS
 ------------------------------- */
-
 @media (min-width: $screen-md-min) {
-
-	.cg-section-donnes{
-
+	.cbo-sectiondonnes{
 		.cg-onglets-container{
-
-			.cg-onglets{
-				
-				.cg-onglets-inner{
-					padding:63% 0 0;
-				}
-
-			}
-			
 			.donnees-container{
-				
 				.svg-container{
-
 					.chart-container{
 						bottom: 20%;
 					}
-
 				}
-
 			}
-
 		}
-
 	}
-
 }
-
 /* -------------------------------
-   LARGE SCREENS
+LARGE SCREENS
 ------------------------------- */
-
 @media (min-width: $screen-lg-min) {
-
-	.cg-section-donnes{
-
+	.cbo-sectiondonnes{
 		.cg-onglets-container{
-
-			.cg-onglets{
-				
-				.cg-onglets-inner{
-					padding:54% 0 0;
-				}
-
-			}
-
 			.donnees-container{
-				
-
 				.svg-container{
 					position: relative;
+					margin-bottom: -7px;
 					height: 237px;
 
 					svg{
@@ -307,17 +229,11 @@
 						top: 0;
 						left: 0;
 					}
-
 					.chart-container{
-						bottom: 8px;
+						bottom: 37px;
 					}
-
 				}
-
 			}
-
 		}
-
 	}
-
 }

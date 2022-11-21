@@ -4,22 +4,30 @@
 	$category_name = isset($category[0]) ? $category[0]->name : 'Page';
 	$category_link = isset($category[0]) ? get_category_link($category[0]) : '#';
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('bloc-article slide-up'); ?> role="article">
-	<a href="<?php the_permalink(); ?>" class="cg-ghost-link"></a>
-	<div class="bloc-article_top">
-		<span class="bloc-article_img lazy" data-bg="<?php echo $featuredImage; ?>">
-			<a href="<?php echo $category_link; ?>" class="bloc-article_cat">
-				<?php echo $category_name; ?>
-			</a>
+<article id="post-<?php the_ID(); ?>" <?php post_class('cbo-article slide-up'); ?> role="article">
+	<a href="<?php the_permalink(); ?>" class="article-inner">
+		<span class="article-top">
+			<span class="article-picture">
+				<span class="picture-category">
+					<?php echo $category_name; ?>
+				</span>
+				<figure class="picture-inner cbo-picture-cover">
+					<?php the_post_thumbnail( 'small' ); ?>
+				</figure>
+			</span>
+
+			<span class="article-content">
+				<h3 class="content-title cbo-title-3">
+					<?php the_title(); ?>
+				</h3>
+				<span class="content-desc">
+					<?php the_excerpt(); ?>
+				</span>
+			</span>
 		</span>
-		<div class="bloc-article_content">
-			<h3 class="bloc-article_title"><?php the_title(); ?></h3>
-			<div class="bloc-article_desc">
-				<?php the_excerpt(); ?>
-			</div>
-		</div>
-	</div>
-	<span class="bloc-article_date">
-		<?php echo get_the_date(); ?>
-	</span>
+
+		<span class="article-date">
+			<?php echo get_the_date(); ?>
+		</span>
+	</a>
 </article>

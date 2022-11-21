@@ -1,8 +1,9 @@
 /* -------------------------------
-   BUTTONS COMPONENT
-   --
-   Mobile First !
+BUTTONS COMPONENT
 ------------------------------- */
+.cbo-buttonscontainer{
+	text-align: center;
+}
 .cbo-button,
 .button{
 	display: inline-flex;
@@ -25,30 +26,11 @@
 	&.green-button{
 		background-color: $lightgreen;
 	}
-	
-	
 	&:hover{
 		&:after{
 			transform:scale(3);
 		}
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	.ripple-after{
 		background-color: rgba($colorblack, 0.1);
 		border-radius: 100%;
@@ -57,13 +39,11 @@
 		display:block;
 		transform: scale(0);
 		width: 100px;
-		
+
 		&.animate {
 			animation: ripple 1s linear;
-		} 
+		}
 	}
-
-
 	&:after{
 		content: '';
 		border-radius:50%;
@@ -78,17 +58,14 @@
 		z-index:1;
 		transform:scale(0.02);
 	}
-	
 	&.border-button{
 		box-shadow:0px 0px 0px 2px $darkblue inset;
 		color: $darkblue;
-		
+
 		&:after{
 			background:rgba(13, 140, 211, 0.2);
 		}
-		
 	}
-	
 	&.lightborder-button{
 		box-shadow:0px 0px 0px 2px $lightblue inset;
 		color: $darkblue;
@@ -96,17 +73,12 @@
 		&:after{
 			background:rgba(221, 232, 238, 0.2);
 		}
-		
 	}
-
 	&.button--center{
 		margin: 0 auto;
 	    margin-top: 50px;
 		display: table;
 	}
-	
-	
-	
 	&.white-button{
 		background-color: $colorwhite;
 		color: $darkblue;
@@ -116,10 +88,8 @@
 		background-color: $darkblue;
 		color: $colorwhite;
 	}
-	
 	&.lightblue-button{
 		background-color: $lightblue;
 		color: $darkblue;
 	}
-
 }

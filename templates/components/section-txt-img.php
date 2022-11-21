@@ -1,7 +1,6 @@
 <?php
 	global $flexible_count;
-	$topmarge	= get_sub_field('marge_du_haut');
-	$botmarge	= get_sub_field('marge_du_bas');
+	$paddingtop	= get_sub_field('padding_top');
 	$title		= get_sub_field('title');
 	$bgcolor	= get_sub_field('bg_color');
 	$desc		= get_sub_field('court_resume');
@@ -11,23 +10,37 @@
 	$animtxt	= get_sub_field('animation_du_texte');
 	$animpic	= get_sub_field('animation_de_limage');
 ?>
-<section id="section-<?php echo $flexible_count; ?>" class="cg-section-txt-img cg-section section-<?php echo $bgcolor ?> cg-marge-top-<?php echo $topmarge ?> cg-marge-bot-<?php echo $botmarge ?>">
-	<div class="container">
-		<?php if( get_sub_field('title') ): ?>
-			<h2 class="main-title">
-				<?php echo $title ?>
-			</h2>
-		<?php endif; ?>
-		<?php if( get_sub_field('court_resume') ): ?>
-			<div class="intro-txt cg-big-txt slide-up">
-				<?php echo $desc ?>
+<section id="section-<?php echo $flexible_count; ?>" class="cbo-sectiontxtimg cbo-bg-<?php echo $bgcolor ?>">
+	<div class="section-inner sectiontxtimg-inner">
+		<div class="cbo-container container-large container-padding paddingtop-<?php echo $paddingtop ?>">
+
+			<?php if( get_sub_field('title') ): ?>
+				<h2 class="cbo-title-2">
+					<?php echo $title ?>
+				</h2>
+			<?php endif; ?>
+
+			<?php if( get_sub_field('court_resume') ): ?>
+				<div class="cbo-chapo slide-up">
+					<?php echo $desc ?>
+				</div>
+			<?php endif; ?>
+
+			<div class="sectiontxtimg-container pic-<?php echo $picpos ?>">
+				<div class="container-picture cbo-picture-cover  slide-<?php echo $animpic ?>">
+					<img
+						src="<?php echo $pic['sizes']['large']; ?>"
+						srcset="<?php echo $pic['sizes']['small'] ?> 320w, <?php echo $pic['sizes']['small'] ?> 768w, <?php echo $pic['sizes']['large'] ?> 1024w, <?php echo $pic['sizes']['large'] ?> 1280w"
+						alt="<?php echo $pic["alt"]; ?>"
+						loading="lazy"
+						width="500px" height="1000px"
+					>
+				</div>
+
+				<div class="container-txt cbo-cms slide-<?php echo $animtxt ?>" >
+					<?php echo $txt ?>
+				</div>
 			</div>
-		<?php endif; ?>
-		<div class="txt-img-container pic-<?php echo $picpos ?>">
-			<div class="section-txt-img_pic lazy slide-<?php echo $animpic ?>" data-bg="<?php echo $pic; ?>"></div>
-			<div class="section-txt-img_txt cg-cms cg-big-txt slide-<?php echo $animtxt ?>" >
-				<?php echo $txt ?>
-			</div>
-		</div><!-- End .txt-img-container -->
-	</div><!-- End .container -->
-</section><!-- End .cg-section-txt-img -->
+		</div>
+	</div>
+</section>

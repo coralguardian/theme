@@ -1,26 +1,23 @@
 /* -------------------------------
-   SECTION TXT IMG COMPONENT
-   --
-   Mobile First !
+SECTION TXT IMG COMPONENT
 ------------------------------- */
+.cbo-sectiontxtimg{
+	overflow: hidden;
 
-.cg-section-txt-img{
-	
-	.intro-txt{
+	.cbo-chapo{
 		margin-bottom: 50px;
 	}
-	
-	.txt-img-container{
-		
-		.section-txt-img_txt{
-			padding: 30px 0 0 0;
-			
+	.sectiontxtimg-container{
+		.container-picture{
+			padding-bottom: 70%;
+			margin-bottom: 20px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.container-txt{
 			h2, h3, h4, h5{
-				font-family:$fontbase;
 				font-size: 20px;
-				font-weight: 700;
-				line-height: 46px;
-				display: block;
+				line-height: 25px;
 				margin: 0 0 15px 0;
 			    display: flex;
     			align-items: center;
@@ -29,7 +26,6 @@
 				&:first-child{
 					margin: 0 0 15px 0;
 				}
-				
 				strong{
 					font-size: 14px;
 					font-weight: 700;
@@ -39,83 +35,36 @@
 				    padding: 0px 15px;
 					margin: 0 15px 0 0;
 				}
-				
 			}
-			
-			.button{
-				margin: 15px 10px 0 0;
-			}
-			
 		}
-		
-		.section-txt-img_pic{
-			height: 300px;
-			background-size: cover;
-			background-position: 50%;
-		}
-		
 	}
-	
 }
-
 /* -------------------------------
-   SMALL SCREENS
+SMALL SCREENS
 ------------------------------- */
-
 @media (min-width: $screen-sm-min) {
-	
-	.cg-section-txt-img{
-
-		.intro-txt{
-			margin-bottom: 80px;
-		}
-
-		.txt-img-container{
+	.cbo-sectiontxtimg{
+		.sectiontxtimg-container{
 			display: flex;
+			justify-content: space-between;
 
-			&.pic-left{
-
-				.section-txt-img_txt{
-					padding: 30px 0 30px 50px;
-				}
-
+			.container-picture{
+				width: 44%;
+				padding-bottom: 0;
+				margin-bottom: 0;
 			}
-
+			.container-txt{
+				padding: 50px 0;
+				width: 52%;
+			}
 			&.pic-right{
-
-				.section-txt-img_txt{
-					padding: 30px 50px 30px 0;
+				.container-picture{
+					order: 2;
 				}
-
-				.section-txt-img_pic{
-					order:2;
+				.container-txt{
+					order: 1;
 				}
-
 			}
-
-			.section-txt-img_txt{
-				width: 60%;
-			
-				h2, h3, h4, h5{
-					font-size: 26px;
-					line-height: 42px;
-				}
-
-				.button{
-					margin: 30px 10px 0 0;
-					display: inline-block;
-					padding: 0 40px;
-				}
-
-			}
-
-			.section-txt-img_pic{
-				width: 40%;
-				height: auto;
-			}
-
 		}
-
 	}
-
 }

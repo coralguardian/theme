@@ -1,20 +1,15 @@
 /* -------------------------------
-   PAGINATION COMPONENT
-   --
-   Mobile First !
+PAGINATION COMPONENT
 ------------------------------- */
-
 .cg-pagination{
-	padding: 0 0 50px 0;
 	width: 100%;
     display: flex;
     justify-content: center;
-	
+
 	li{
-		
 		a{
 			color: $darkblue;
-			margin: 0 10px;
+			margin: 0 5px;
 			border-radius: 4px;
 			box-shadow: 0px 0px 0px 1px $darkblue inset;
 			font-size: 14px;
@@ -23,48 +18,24 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			transition: .5s $easeinout;
 		}
-		
+		&.active,
+		&:hover{
+			a{
+				box-shadow: 0px 0px 0px 50px $darkblue inset;
+				color: $colorwhite;
+			}
+		}
 		&.paginate-next,
 		&.paginate-prev{
-			
 			a{
 				width: auto;
 				padding: 0 24px;
 			}
-			
 		}
-		
 		&.disabled{
 			display: none;
 		}
-		
 	}
-	
-}
-
-/* -------------------------------
-   SMALL SCREENS
-------------------------------- */
-
-@media (min-width: $screen-sm-min) {
-
-	.cg-pagination{
-		
-		li{
-
-			a{
-				transition: .5s $easeinout;
-
-				&:hover{
-					box-shadow: 0px 0px 0px 50px $darkblue inset;
-					color: $colorwhite;
-				}
-
-			}
-
-		}
-		
-	}
-	
 }

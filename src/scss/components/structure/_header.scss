@@ -59,7 +59,7 @@ header{
 
 		&:after{
 			font-family:"icons";
-			content: "\f10a";
+			content: "\f10b";
 			font-weight: bold;
 			font-size: 48px;
 			line-height: 48px;
@@ -126,8 +126,11 @@ header{
 		position: relative;
 		z-index: 7;
 		height: 40px;
+		padding: 0px 10px;
+		font-size: 12px;
 
 		i{
+			font-weight: 100;
 			margin-right: 8px;
 		}
 	}
@@ -158,18 +161,28 @@ header{
 		}
 		ul{			
 			li{
+				&.current_page_parent{
+					a{
+						color:$currentblue;
+						font-weight: bold;
+					}
+				}
 				a{
 					margin: 12px 0;
 					color: $colorwhite;
 					display: inline-flex;
 					align-items: center;
 					position: relative;
+
+					.wpml-ls-flag{
+						margin-right: 10px;
+					}
 				}
 				&.menu-item-has-children {
 					a{
 						&:after{
 							font-family:"icons";
-							content: '\f10c';
+							content: '\f10d';
 							font-size: 10px;
 							line-height: 10px;
 							position: absolute;
@@ -204,7 +217,7 @@ header{
 				}
 				&.current-menu-item{
 					a{
-						color:$lightgreen;
+						color:$currentblue;
 						font-weight: bold;
 					}					
 				}

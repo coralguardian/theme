@@ -1,33 +1,24 @@
 /* -------------------------------
-   CONNEXION COMPONENT
-   --
-   Mobile First !
+CONNEXION COMPONENT
 ------------------------------- */
-
 .login{
 	background: url("../img/coral-guardian-bg-404.jpg") no-repeat center;
-	
+
 	a{
 		color:$darkblue;
-		
+
 		&:hover{
 			color:$darkblue;
 		}
-		
 	}
-	
 	h1{
-		
 		a{
 			background: url("../img/logo-coral-guardian-connect.png") no-repeat;
 			width:157px;
 			height: 51px;
 		}
-		
 	}
-
 }
-
 .wp-core-ui .button-primary{
 	background: $darkblue;
 	border-color:$darkblue;

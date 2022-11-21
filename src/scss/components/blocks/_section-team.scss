@@ -1,62 +1,135 @@
 /* -------------------------------
-   SECTION TEAM COMPONENT
-   --
-   Mobile First !
+SECTION TEAM COMPONENT
 ------------------------------- */
+.cbo-sectionteam{
+	.cg-onglets-container{
+		display: block;
 
-.cg-section-team{
-			
-	.bloc-team{
-		text-align: center;
-		flex-direction: column;
-		display: flex;
-		margin: 0 0 30px 0;
-				
-		.team-pic{
-			width: 100px;
-			height: 100px;
-			display: block;
-			margin: 0 auto;
-			margin-bottom: 10px;
-			border-radius: 4px;
-		}
-			
-		.team-desc{
-			font-size: 12px;
-			line-height: 17px;
-    		margin: 10px 0 0 0;
-		}
-				
-	}
-				
-}
-
-/* -------------------------------
-   SMALL SCREENS
-------------------------------- */
-
-@media (min-width: $screen-sm-min) {
-
-	.cg-section-team{
-
-		.cg-onglets-container{
-
-			.cg-onglets_content{
-				display: flex;
-				flex-wrap: wrap;
+		.cg-onglets{
+			.cg-onglet_title{
+				margin: 0;
+				padding: 0 10px;
 				justify-content: center;
-				width: 70%;
-    			margin: auto;
-				
-				.bloc-team{
-					width: 21%;
-					margin: 0 15px 50px 15px;
+			
+				.cg-onglet_title-pic{
+					display: block;
+					width: 50px;
+					height: 50px;
+					margin: 0 auto 10px auto;
 				}
-
 			}
-
 		}
+	}
+	.team-role{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 50px;
 
-	}	
+		.role--blue,
+		.role--sand{
+			position: relative;
+			align-items: center;
+			display: flex;
+			padding: 0 20px;
 
+			&:after{
+				content: '';
+				width: 10px;
+				height: 10px;
+				border-radius: 10px;
+				position: absolute;
+				right: 0;
+			}
+		}
+		.role--blue{
+			&:after{
+				box-shadow: 0px 0px 0px 3px $lightblue inset ;
+			}
+		}
+		.role--sand{
+			&:after{
+				box-shadow: 0px 0px 0px 3px $colorbeige inset;
+			}
+		}
+	}
+	.list-el{
+		display: flex;
+		flex-wrap: wrap;
+
+		.el-inner{
+			text-align: center;
+			padding: 20px 10px;
+			width: 50%;
+			text-transform: uppercase;
+
+			.inner-pic{
+				overflow: hidden;
+				border-radius: 150px;
+				width: 150px;
+				height: 150px;
+				display: block;
+				margin: 0 auto 20px;
+				box-shadow: 0px 0px 0px 3px $colorbeige;
+			}
+			.inner-name{
+				font-size: 18px;
+				line-height: 20px;
+				display: block;
+			}
+			.inner-desc{
+				font-size: 12px;
+				line-height: 17px;
+				display: block;
+			}
+			&.inner-salary{
+				.inner-pic{
+					box-shadow: 0px 0px 0px 3px $lightblue;
+				}
+			}
+		}
+	}
+}
+/* -------------------------------
+XSMALL SCREENS
+------------------------------- */
+@media (min-width: 650px) {
+	.cbo-sectionteam{
+		.list-el{
+			.el-inner{
+				width: 33.3333%;
+			}
+		}
+	}
+}
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min) {
+	.cbo-sectionteam{
+		.cg-onglets-container{	
+			.cg-onglets{	
+				.cg-onglet_title{
+					padding: 0 30px;
+				}
+			}
+		}
+		.team-role{	
+			.role--blue,
+			.role--sand{
+				padding: 0 30px;
+
+				&:after{
+					width: 20px;
+					height: 20px;
+					border-radius: 20px;
+				}
+			}
+		}
+		.list-el{
+			.el-inner{
+				width: 25%;
+			}
+		}
+	}
 }

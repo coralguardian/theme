@@ -2,12 +2,11 @@
 	get_header(); 
 ?>
 	<div class="cg-page-404">
-		
 		<div class="page-404-content">
-			<h1 class="main-title">
+			<h1 class="cbo-title-2">
 				<?php _e( 'Page not found'); ?>
 			</h1>
-			<div class="intro-txt slide-up">
+			<div class="cbo-chapo slide-up">
 				<h2><?php _e('Oops...'); ?></h2>
 				<?php if(ICL_LANGUAGE_CODE=='fr'): ?>
 					<p><?php _e('Il semble que la page que vous cherchez est introuvable. Vous pouvez toujours revenir sur vos pas');?></p>
@@ -21,8 +20,8 @@
 					</a>
 				<?php endif;?>
 			</div>
-		</div><!-- End .page-404-content -->
-		
+		</div>
+
 		<svg id="svg">
 			<defs>
 				<filter id="disFilter">
@@ -36,7 +35,7 @@
 				<image xlink:href="<?php echo get_template_directory_uri(); ?>/library/img/coral-guardian-bg-404.jpg" x="0" y="0" height="100%" width="100%" preserveAspectRatio="xMidYMid slice" />
 			</g>
 		</svg>
-	</div><!-- End .cg-page-404 -->
+	</div>
 <?php
 	get_footer();
 ?>

@@ -1,15 +1,9 @@
 /* -------------------------------
-   MAP SECTION COMPONENTS
-   --
-   Mobile First !
+MAP SECTION COMPONENTS
 ------------------------------- */
-
-.cg-section-map{
-	padding: 0;
-	
+.cg-section-map{	
 	#map{
 		width: 100%;
-		height: 100vh;
+		padding-bottom: 40%;
 	}
-
 }

@@ -10,31 +10,44 @@
 	));
 ?>
 	<div class="cg-page-archive">
-		<section class="cg-section-hero" data-parallax="scroll" data-image-src="<?php echo $catmainpic; ?>">
-			<div class="container hero-content cg-relative">
-				<div class="hero-title"><h1><?php single_cat_title(); ?></h1></div>
-				<div class="intro-txt">
-					<?php echo category_description(); ?>
-					<?php if(ICL_LANGUAGE_CODE=='fr'): ?>
-						<p><a class="button ripple white-button search-button" href="#">Parcourir</a></p>
-					<?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
-						<p><a class="button ripple white-button search-button" href="#">Search</a></p>
-					<?php endif;?>
+
+		<section id="section-<?php echo $flexible_count; ?>" class="cbo-hero">
+			<div class="cbo-container container-large container-nomargin container-padding hero-inner">
+				<div class="inner-content cg-relative">
+					<div class="content-title">
+						<h1><?php single_cat_title(); ?></h1>
+					</div>
+					<div class="cbo-chapo slide-up">
+						<?php echo category_description(); ?>
+						<?php if(ICL_LANGUAGE_CODE=='fr'): ?>
+							<p><a class="button ripple white-button search-button" href="#">Parcourir</a></p>
+						<?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
+							<p><a class="button ripple white-button search-button" href="#">Search</a></p>
+						<?php endif;?>
+					</div>
 				</div>
 			</div>
-			<div class="cg-mask low"></div>
-		</section><!-- End .cg-section-hero -->
+			<div class="hero-picture cbo-picture-cover">
+				<img
+					src="<?php echo $catmainpic['sizes']['xlarge']; ?>"
+					srcset="<?php echo $catmainpic['sizes']['xlarge'] ?> 320w, <?php echo $catmainpic['sizes']['xlarge'] ?> 768w, <?php echo $catmainpic['sizes']['xlarge'] ?> 1024w, <?php echo $catmainpic['sizes']['xlarge'] ?> 1280w"
+					alt="<?php echo $catmainpic["alt"]; ?>"
+					loading="lazy"
+					width="1900px" height="700px"
+				>
+			</div>
+		</section>
 
-		<div class="container">
+		<div class="cbo-container container-large">
 			<ul class="categories-container">
 				<?php 
-					$hierarchical = true;
+					$hierarchical = false;
 					wp_list_categories( array(
 						'hierarchical' => $hierarchical,
 						'title_li' => ''
 					) );
 				?> 
-			</ul><!-- End .categories-container -->
+			</ul>
 			<div class="categories-select">
 				<select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
 					<?php foreach( $categories as $category ): ?>
@@ -42,46 +55,24 @@
 					<?php endforeach; ?>
 				</select>
 			</div>
+		</div>
+
+		<div class="cbo-container container-large">
 			<div class="listing-articles">
 				<?php
 					if (have_posts()) :
 					while (have_posts()) : the_post();
-					$featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-					$category = get_the_category();
-					$category_name = isset($category[0]) ? $category[0]->name : 'N.C';
-					$category_link = isset($category[0]) ? get_category_link($category[0]) : '#';
-				?>
-					<article id="post-<?php the_ID(); ?>" <?php post_class('bloc-article'); ?> role="article">
-						<a href="<?php the_permalink(); ?>" class="cg-ghost-link"></a>
-						<div class="bloc-article_top">
-							<span class="bloc-article_img" style="background:url(<?php echo $featuredImage; ?>) no-repeat center;background-size:cover">
-								<a href="<?php echo $category_link; ?>" class="bloc-article_cat">
-									<?php echo $category_name; ?>
-								</a>
-							</span>
-							<div class="bloc-article_content">
-								<h3 class="bloc-article_title"><?php the_title(); ?></h3>
-								<div class="bloc-article_desc">
-									<?php the_excerpt(); ?>
-								</div>
-							</div>
-						</div>
-						<span class="bloc-article_date">
-							<?php echo get_the_date(); ?>
-						</span>
-					</article>
-				<?php
+					get_template_part('templates/content/content', 'article');
 					endwhile;
 					endif;
 				?>
-			</div><!-- End .listing-articles -->
-			
+			</div>
+		</div>
+
+		<div class="cbo-container container-large">
 			<?php page_navi(); ?>
-			
-		</div><!-- End .container -->
-
-	</div><!-- End .he-page-archive -->
-
+		</div>
+	</div>
 <?php
 	get_footer();
 ?>

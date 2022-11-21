@@ -6,29 +6,47 @@
 	$addform	= get_sub_field('ajouter_un_formulaire_dadoption');
 	$form		= get_sub_field('formulaire');
 ?>
-<section id="section-<?php echo $flexible_count; ?>" class="cg-section-hero lazy" data-parallax="scroll" data-image-src="<?php echo $pic ?>">
-	<div class="container hero-content cg-relative">
-		<?php if($addform == 1): ?>
-			<div class="hero-form">
-				<div class="hero-form-left">
-					<div class="hero-title"><?php echo $title ?></div>
-					<?php if( get_sub_field('texte_dintroduction') ): ?>
-						<div class="intro-txt cg-big-txt slide-up">
-							<?php echo $desc ?>
+<section id="section-<?php echo $flexible_count; ?>" class="cbo-hero">
+	<div class="cbo-container container-large container-nomargin container-padding hero-inner">
+		<div class="inner-content cg-relative">
+			<?php if($addform == 1): ?>
+				<div class="hero-form">
+					<div class="hero-form-left">
+						<div class="content-title">
+							<?php echo $title ?>
 						</div>
-					<?php endif; ?>
+						<?php if( get_sub_field('texte_dintroduction') ): ?>
+							<div class="cbo-chapo slide-up">
+								<?php echo $desc ?>
+							</div>
+						<?php endif; ?>
+					</div>
+					<div class="hero-form-right">
+						<?php echo $form ?>
+					</div>
 				</div>
-				<div class="hero-form-right">
-					<?php echo $form ?>
+
+			<?php else : ?>
+
+				<div class="content-title">
+					<?php echo $title ?>
 				</div>
-			</div><!-- End .hero-type-form -->
-		<?php else : ?>
-			<div class="hero-title"><?php echo $title ?></div>
-			<?php if( get_sub_field('texte_dintroduction') ): ?>
-				<div class="intro-txt cg-big-txt slide-up">
-					<?php echo $desc ?>
-				</div>
+				<?php if( get_sub_field('texte_dintroduction') ): ?>
+					<div class="cbo-chapo slide-up">
+						<?php echo $desc ?>
+					</div>
+				<?php endif; ?>
+
 			<?php endif; ?>
-		<?php endif; ?>
-	</div><!-- End .hero-content -->
-</section><!-- End .cg-section-hero -->
+		</div>
+	</div>
+	<div class="hero-picture cbo-picture-cover">
+		<img
+			src="<?php echo $pic['sizes']['xlarge']; ?>"
+			srcset="<?php echo $pic['sizes']['xlarge'] ?> 320w, <?php echo $pic['sizes']['xlarge'] ?> 768w, <?php echo $pic['sizes']['xlarge'] ?> 1024w, <?php echo $pic['sizes']['xlarge'] ?> 1280w"
+			alt="<?php echo $pic["alt"]; ?>"
+			loading="lazy"
+			width="1900px" height="700px"
+		>
+	</div>
+</section>

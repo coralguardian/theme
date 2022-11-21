@@ -1,79 +1,48 @@
 /* -------------------------------
-   BLOCS WITH BIG NUMBER SECTION COMPONENTS
-   --
-   Mobile First !
+BLOCS WITH BIG NUMBER SECTION COMPONENTS
 ------------------------------- */
-
-.cg-section-blocs-number{
-	
-	.blocs-number-container{
-		
-		.bloc-number{
-			border: 2px solid $lightblue;
-			border-radius: 9px;
-			text-align: left;
-			padding: 20px;
-			margin: 0 0 30px 0;
-			
-			.number{
-				font-family:$fonttitle;
-				font-size: 60px;
-				line-height: 60px;
-				text-transform: uppercase;
-			    width: 100%;
-			}
-			
-		}
-		
-		img{
-			display: block;
-			margin: 0 auto;
-			margin-top: 20px;
-		}
-		
+.cbo-sectionnumber{
+	.cbo-chapo{
+		margin-bottom: 40px;
 	}
-	
-	&.section-light-blue{
-		
-		.blocs-number-container{
-			
-			.bloc-number{
-				border: 3px solid $darkblue;
-			}
+	.list-el{
+		.el-inner {
+			padding: 10px 0;
 
-		}
-		
-	}
-	
-}
+			.inner-content{
+				height: 100%;
+				border: 2px solid $lightblue;
+				border-radius: 9px;
+				padding: 20px;
 
-/* -------------------------------
-   SMALL SCREENS
-------------------------------- */
-
-@media (min-width: $screen-sm-min) {
-	
-	.cg-section-blocs-number{
-
-		.intro-txt{
-			margin-bottom: 80px;
-		}
-
-		.blocs-number-container{
-			display: flex;
-			
-			.bloc-number{
-				margin: 0;
-				width: 100%;
-				
-				&:last-child{
-					margin: 0 0 0 30px;
+				.inner-number{
+					font-family:$fonttitle;
+					font-size: 60px;
+					line-height: 60px;
 				}
-				
+				.inner-desc{
+					line-height: 22px;
+				}
 			}
-
 		}
-
 	}
+	.cbo-buttonscontainer{
+		margin-top: 40px;
+	}
+}
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min) {
+	.cbo-sectionnumber{
+		.list-el{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 
+			.el-inner{
+				width: 49%;
+			}
+		}
+	}
 }

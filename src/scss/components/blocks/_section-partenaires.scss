@@ -1,54 +1,28 @@
 /* -------------------------------
-   PARTNERS SECTION COMPONENTS
-   --
-   Mobile First !
+PARTNERS SECTION COMPONENTS
 ------------------------------- */
-.cg-section-partner{
-		
-	.slick-slide{
-		position: relative;
-		
-		.bloc-partner{
-			display: block;
-			text-align: center;
-			height: 100px;
-			padding: 0 0 15px 0;
-			
-			.partner-pic{
-				width: 80%;
-				height: 80%;
-				object-fit: contain;
-				object-position: center;
-				margin: 0 auto;
-				transition: all .5s cubic-bezier(.85,0,.15,1);
-			}
-			
-			.partner-title{
-				color: $colorblack;
-				font-weight: 700;
-			}
-		}
-	}
-}
+.cbo-partners{
+	.list-el{
+		.el-inner{
+			display: flex !important;
+			align-items: center;
+			justify-content: center;
 
-/* -------------------------------
-   SMALL SCREENS
-------------------------------- */
-@media (min-width: $screen-sm-min) {
+			.inner-content{
+				padding: 10px 0;
 
-	.cg-section-partner{
-
-		.slick-slide{
-
-			.bloc-partner{
-				
-				&:hover{
-
-					.partner-pic{
-						opacity: 0.8;
-					}
+				.content-picture{
+					width: 100px;
+					display: block;
+					padding-bottom: 70%;
 				}
-			}		
+				.content-title{
+
+				}
+			}
 		}
-	}
+		.slick-dots {
+			margin-top: 40px;
+		}
+	}	
 }

@@ -1,9 +1,8 @@
 <?php
 	global $flexible_count;
-	$topmarge	= get_sub_field('marge_du_haut');
-	$botmarge	= get_sub_field('marge_du_bas');
-	$title		= get_sub_field('title');
 	$bgcolor	= get_sub_field('bg_color');
+	$paddingtop	= get_sub_field('padding_top');
+	$title		= get_sub_field('title');
 	$desc		= get_sub_field('resume_de_la_section');
 	$blocs		= get_sub_field('blocs');
 	$addbt		= get_sub_field('ajouter_un_bouton');
@@ -11,30 +10,37 @@
 	$bttxt		= get_sub_field('texte_du_bouton');
 	$btlink		= get_sub_field('lien_du_bouton');
 ?>
-<section id="section-<?php echo $flexible_count; ?>" class="cg-section-blocs-number cg-section section-<?php echo $bgcolor ?> cg-marge-top-<?php echo $topmarge ?> cg-marge-bot-<?php echo $botmarge ?>">
-	<div class="container">
-		<?php if( get_sub_field('title') ): ?>
-			<h2 class="main-title">
-				<?php echo $title ?>
-			</h2>
-		<?php endif; ?>
-		
-		<?php if( get_sub_field('resume_de_la_section') ): ?>
-			<div class="intro-txt cg-big-txt slide-up">
-				<?php echo $desc ?>
-			</div>
-		<?php endif; ?>
+<section id="section-<?php echo $flexible_count; ?>" class="cbo-sectionnumber cbo-bg-<?php echo $bgcolor ?>">
+	<div class="section-inner sectionnumber-inner">
+		<div class="cbo-container container-padding paddingtop-<?php echo $paddingtop ?>">
+			<?php if( get_sub_field('title') ): ?>
+				<h2 class="cbo-title-2">
+					<?php echo $title ?>
+				</h2>
+			<?php endif; ?>
 
-		<div class="blocs-number-container">
-			<?php foreach($blocs as $bloc): ?>
-				<div class="current-bloc bloc-number slide-up">
-					<span class="number"><?php echo $bloc["chiffre_cle"]; ?></span>
-					<span class="bloc-desc"><?php echo $bloc["description"]; ?></span>
+			<?php if( get_sub_field('resume_de_la_section') ): ?>
+				<div class="cbo-chapo slide-up">
+					<?php echo $desc ?>
 				</div>
-			<?php endforeach; ?>
+			<?php endif; ?>
+
+			<div class="list-el">
+				<?php foreach($blocs as $bloc): ?>
+					<div class="el-inner slide-up">
+						<div class="inner-content">
+							<span class="inner-number"><?php echo $bloc["chiffre_cle"]; ?></span>
+							<span class="inner-desc"><?php echo $bloc["description"]; ?></span>
+					</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
+
+			<?php if($addbt == 1): ?>
+				<div class="cbo-buttonscontainer">
+					<a href="<?php echo $btlink ?>" class="button ripple <?php echo $bttype ?>"><?php echo $bttxt ?></a>
+				</div>
+			<?php endif; ?>
 		</div>
-		<?php if($addbt == 1): ?>
-			<a href="<?php echo $btlink ?>" class="button ripple button--center <?php echo $bttype ?>"><?php echo $bttxt ?></a>
-		<?php endif; ?>
-	</div><!-- End .container -->
-</section><!-- End .cg-section-blocs-number -->
+	</div>
+</section>

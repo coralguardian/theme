@@ -23,19 +23,45 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/library/img/fav/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_template_directory_uri(); ?>/library/img/fav/favicon-96x96.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/library/img/fav/favicon-16x16.png">
-		<?php wp_head(); ?>		
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28782686-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-28782686-1');
+			gtag('config', 'AW-962379492');
+		</script>
+		<!-- Facebook Pixel Code -->
+		<script>
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window, document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '693436517874437');
+			fbq('track', 'PageView');
+		</script>
+		<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=693436517874437&ev=PageView&noscript=1"/></noscript>
+		<!-- End Facebook Pixel Code -->
+
+		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(''); ?> itemscope itemtype="http://schema.org/WebPage">
 		<header>
 			<div class="header-top">
 				<a class="cbo-button green-button header-button" href="<?php the_field('donation_url', 'option'); ?>">
-					<i class="icon icon--donation"></i>Faire un don
+					<i class="icon icon--donation"></i><?php the_field('txt_donationbt', 'option'); ?>
+				</a> 
+				<a class="cbo-button border-button header-button" href="<?php the_field('adoption_url', 'option'); ?>">
+					<i class="icon icon--certificat"></i><?php the_field('txt_adoptebt', 'option'); ?>
 				</a>
 				<a class="cbo-button border-button header-button" href="<?php the_field('gift_url', 'option'); ?>">
-					<i class="icon icon--gift"></i>J'ai un bon cadeau
-				</a>
-				<a class="cbo-button border-button header-button" href="<?php the_field('adoption_url', 'option'); ?>">
-					<i class="icon icon--certificat"></i>Adoptez un corail
+					<i class="icon icon--gift"></i><?php the_field('txt_giftbt', 'option'); ?>
 				</a>
 			</div>
 
@@ -46,7 +72,7 @@
 				</a>
 
 				<a class="cbo-button green-button header-button" href="<?php the_field('donation_url', 'option'); ?>">
-					<i class="icon icon--donation"></i>Faire un don
+					<i class="icon icon--donation"></i><?php the_field('txt_donationbt', 'option'); ?>
 				</a>
 
 				<button type="button" class="burger-menu">
@@ -55,11 +81,11 @@
 					<span class="bottom"></span>
 				</button>
 				<nav class="header-nav">
-					<a class="cbo-button border-button header-button" href="<?php the_field('gift_url', 'option'); ?>">
-						<i class="icon icon--gift"></i>J'ai un bon cadeau
+				<a class="cbo-button border-button header-button" href="<?php the_field('adoption_url', 'option'); ?>">
+						<i class="icon icon--certificat"></i><?php the_field('txt_adoptebt', 'option'); ?>
 					</a>
-					<a class="cbo-button border-button header-button" href="<?php the_field('adoption_url', 'option'); ?>">
-						<i class="icon icon--certificat"></i>Adoptez un corail
+					<a class="cbo-button border-button header-button" href="<?php the_field('gift_url', 'option'); ?>">
+						<i class="icon icon--gift"></i><?php the_field('txt_giftbt', 'option'); ?>
 					</a>
 					<?php wp_nav_menu( array(
 						'container' => false,
@@ -75,4 +101,13 @@
 			<button type="button" class="search-close">
 				<i class="icon icon--close"></i>
 			</button>
+			<form role="search" method="get" class="searchform" action="<?php echo home_url( '/' ); ?>">
+				<?php if(ICL_LANGUAGE_CODE=='fr'): ?>
+					<input name="s" id="s" type="text" placeholder="<?php _e('Votre recherche'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
+					<button class="button ripple green-button" type="submit">Rechercher</button>
+				<?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
+					<input name="s" id="s" type="text" placeholder="<?php _e('Your search'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
+					<button class="button ripple green-button" type="submit">Search</button>
+				<?php endif;?>
+			</form>
 		</div>

@@ -1,189 +1,107 @@
 /* -------------------------------
    MICRO COMPONENT FOR ACTU BLOC
-   --
-   Mobile First !
 ------------------------------- */
+.cbo-article{
+	padding: 10px 0;
 
-.listing-articles{
-	
-	.slick-list{
-	
-		.slick-track{
-			display: flex;
-			justify-content: center;
-			
-			.slick-slide{
-				height: auto;
-				margin: 0 0 30px 0;
-				
-				&.slick-slide>div{
-					height: 100%;
-				}
-				
-				.bloc-article{
-					margin: 0;
-					height: 100%;
-					display: flex !important;
-					align-content: space-between;
-				}
-				
-			}
-			
-		}
-
-	}
-
-	.bloc-article{
-		box-shadow: 0px 0px 0px 2px $lightblue inset;
-		border-radius:10px;
-		margin-bottom: 30px;
+	.article-inner{
+		height: 100%;
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
+		border-radius:10px;
 		position: relative;
 		background: $colorwhite;
-	
-		.bloc-article_top{
-			width: 100%;
-			
-			.bloc-article_img{
-				height: 180px;
+		overflow: hidden;
+		color: $colorblack;
+		border:2px solid $lightblue;
+
+		.article-top{
+			.article-picture{
 				display: block;
-				border-radius: 10px 10px 0 0;
-				position:relative;
-				background-size: cover;
-				background-position: center;
-			}
+				position: relative;
 
-			.bloc-article_cat{
-				padding: 7px 12px;
-				color: $darkblue;
-				background: $lightblue;
-				text-transform: uppercase;
-				font-size: 12px;
-				font-weight: 700;
-				position: absolute;
-				bottom: -18px;
-				left: 15px;
-				z-index: 3;
-				transition: all .5s cubic-bezier(.85,0,.15,1);
+				.picture-category{
+					color: $darkblue;
+					z-index: 2;
+					position: absolute;
+					bottom: -20px;
+					left: 15px;
+					height: 40px;
+					width: max-content;
+					display: inline-flex;
+					align-items: center;
+					padding: 0 10px;
+					font-weight: 700;
+					background: $lightblue;
+					text-transform: uppercase;
+					font-size: 12px;
+					transition: all .5s cubic-bezier(.85,0,.15,1);
+				}
+				.picture-inner{
+					padding-bottom: 70%;
+					margin: 0;
+				}
 			}
-
-			.bloc-article_content{
+			.article-content{
+				display: block;
 				padding: 30px 15px 15px 15px;
 			
-				.bloc-article_title{
-					font-size: 20px;
-					font-weight: 400;
-					line-height: 26px;
-					display: block;
+				.content-title{
 					margin-bottom: 15px;
 					color: $colorblack;
 					transition: all .5s cubic-bezier(.85,0,.15,1);
 				}
-
-				.bloc-article_desc{
+				.content-desc{
 					font-size: 12px;
 					line-height: 20px;
 				}
-
 			}
-			
 		}
-		
-		.bloc-article_date{
-			font-size: 12px;
-			font-weight: 700;
-			border-top: 1px solid $colorblack;
-			padding: 15px 0;
-			margin: 0 15px;
-			display: block;
-			width: 100%;
-		}
-		
 	}
-	
+	.article-date{
+		font-size: 12px;
+		font-weight: 700;
+		border-top: 1px solid $colorblack;
+		padding: 15px;
+		display: block;
+	}
 }
-
 /* -------------------------------
    SMALL SCREENS
 ------------------------------- */
-
 @media (min-width: $screen-sm-min) {
+	.cbo-article{
+		padding:10px;
+		width: 48%;
 
-	.listing-articles{
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		
-		.slick-list{
-
-			.slick-track{
-
-				.slick-slide{
-					width: 45% !important;
-    				margin: 0 15px 30px;
-				}
-
-			}
-
+		.article-inner{
+			justify-content: space-between;
 		}
-
-		.bloc-article{
-			width: 45%;
-			align-content: space-between;
-			margin: 0 15px 30px 15px;
-			
-			.bloc-article_top{
-
-				.bloc-article_content{
-
-					.bloc-article_title{
-						font-size: 26px;
-						line-height: 32px;
-					}
-				
-				}
-
-			}
-			
-			&:hover{
-				
-				.bloc-article_top{
-			
-					.bloc-article_cat{
-						bottom: 20px;
-					}
-					
-					.bloc-article_content{
-
-						.bloc-article_title{
-							color:$darkblue;
-						}
-
-					}
-
-				}
-				
-			}
-			
-		}
-
 	}
-
 }
-
 /* -------------------------------
    MEDIUM SCREENS
 ------------------------------- */
-
 @media (min-width: $screen-md-min) {
+	.cbo-article{
+		width: 33.3333%;
 
-	.listing-articles{
-		
-		.bloc-article{
-			width: 30%;
+		&:hover{
+			.article-top{
+				.article-picture{	
+					.picture-category{
+						bottom: 20px;
+					}
+				}
+				.article-content{
+					display: block;
+					padding: 30px 15px 15px 15px;
+
+					.content-title{
+						color:$currentblue;
+					}
+				}
+			}
 		}
-
 	}
-
 }

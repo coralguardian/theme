@@ -77,7 +77,7 @@
 					///////////////////
 					//  SECTION ADOPTION
 					elseif( get_row_layout() == 'tranche_adoption' ): 
-						get_template_part( 'templates/components/section-adoption');
+						get_template_part( 'templates/components/section-contact');
 		
 					///////////////////
 					//  SECTION SLIDER

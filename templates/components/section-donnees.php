@@ -1,16 +1,17 @@
 <?php
 	global $flexible_count;
 	$title		= get_sub_field('title');
-	$bgcolor	= get_sub_field('bg_color');
 	$titledonnees = get_sub_field('titre_des_donnees');
 	$txtdonnees = get_sub_field('texte_des_donnees');
 ?>
-
-<section id="section-<?php echo $flexible_count; ?>" class="cg-section-donnes cg-section section-<?php echo $bgcolor ?>">
-	<div class="container">
+<section id="section-<?php echo $flexible_count; ?>" class="cbo-sectiondonnes cbo-bg-<?php echo $bgcolor ?>">
+	<div class="sectiondonnes-inner cbo-container container-padding">
 		<?php if( get_sub_field('title') ): ?>
-			<h2 class="main-title"><?php echo $title ?></h2>
+			<h2 class="cbo-title-2">
+				<?php echo $title ?>
+			</h2>
 		<?php endif; ?>
+
 		<div class="cg-onglets-container">
 			<?php 
 				if( have_rows('onglets') ):
@@ -28,13 +29,23 @@
 							<span class="cg-onglet_title <?php if ($counter_nav == 1) : ?>active<?php endif; ?>" id="onglet_<?php echo $counter_nav; ?>-<?php echo $flexible_count; ?>" >
 								<?php echo $titre; ?>
 							</span>
-							<span class="onglet-pic lazy <?php if ($counter_pic == 1) : ?>active<?php endif; ?>" id="pic_onglet_<?php echo $counter_nav; ?>-<?php echo $flexible_count; ?>" data-bg="<?php echo $ongletpic; ?>"></span>
-							<?php $counter_nav++; ?>
-							<?php $counter_pic++; ?>
-						<?php endwhile; ?>
-						
+							
+							<div class="onglet-pic cbo-picture-cover <?php if ($counter_pic == 1) : ?>active<?php endif; ?>" id="pic_onglet_<?php echo $counter_nav; ?>-<?php echo $flexible_count; ?>" >
+								<img
+									src="<?php echo $ongletpic['sizes']['small']; ?>"
+									srcset="<?php echo $ongletpic['sizes']['small'] ?> 320w, <?php echo $ongletpic['sizes']['small'] ?> 768w, <?php echo $ongletpic['sizes']['small'] ?> 1024w, <?php echo $ongletpic['sizes']['small'] ?> 1280w"
+									alt="<?php echo $ongletpic["alt"]; ?>"
+									loading="lazy"
+									width="500px" height="500px"
+								>
+							</div>
+						<?php
+							$counter_nav++;
+							$counter_pic++;
+							endwhile; 
+						?>
 					</div>
-				</div><!-- End .cg-onglets -->
+				</div>
 			<?php endif; ?>
 			
 			<div class="donnees-container">
@@ -68,7 +79,7 @@
 							if( have_rows('onglets') ):
 							while( have_rows('onglets') ): the_row();
 						?>
-							<div class="cg-onglets_content cg-cms <?php if ($counter_div == 1) : ?>active<?php endif; ?>"  id="contenu_onglet_<?php echo $counter_div; ?>-<?php echo $flexible_count; ?>">
+							<div class="cg-onglets_content cbo-cms <?php if ($counter_div == 1) : ?>active<?php endif; ?>"  id="contenu_onglet_<?php echo $counter_div; ?>-<?php echo $flexible_count; ?>">
 								<div class="bar-chart-container">
 									<?php
 										if( have_rows('donnees') ):
@@ -84,14 +95,14 @@
 										$counter_div++;
 									?>
 								</div>
-							</div><!-- End .cg-onglets_content -->
+							</div>
 						<?php
 							endwhile;
 							endif;
 						?>
-					</div><!-- End .chart-container -->
-				</div><!-- End .svg-container -->
-			</div><!-- End .donnees-container -->
-		</div><!-- End .cg-onglets-container -->
-	</div><!-- End .container -->
-</section><!-- End .cg-section-donnes -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
