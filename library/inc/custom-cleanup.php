@@ -24,6 +24,17 @@
 		add_filter( 'wp_title', 'cbo_head_title', 10, 3 );
 	}
 
+	function wpdocs_theme_name_scripts() {
+		wp_enqueue_script( 'sgr_main', 'https://preprod.coralguardian.org/app/plugins/simple-google-recaptcha/sgr.js?ver=1665990095', array(), '1.0.0', true );
+		wp_enqueue_script( 'sib-front-js', 'https://preprod.coralguardian.org/app/plugins/mailin/js/mailin-front.js?ver=1665990095', array(), '1.0.0', true );
+		wp_enqueue_script( 'cookie-law-info', 'https://preprod.coralguardian.org/app/plugins/cookie-law-info/public/js/cookie-law-info-public.js?ver=2.0.6', array(), '1.0.0', true );
+		wp_enqueue_script( 'ppress-flatpickr', 'https://preprod.coralguardian.org/app/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.js?ver=5.9.3', array(), '1.0.0', true );
+		wp_enqueue_script( 'ppress-select2', 'https://preprod.coralguardian.org/app/plugins/wp-user-avatar/assets/select2/select2.min.js?ver=5.9.3', array(), '1.0.0', true );
+		wp_enqueue_script( 'wpml-legacy-dropdown-0', 'https://preprod.coralguardian.org/app/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/script.min.js?ver=1', array(), '1.0.0', true );
+		wp_enqueue_script( 'stripe', 'https://js.stripe.com/v3/', array(), '1.0.0', true );
+	}
+	add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
+
 	// remove WP version from scripts
 	function bones_remove_wp_ver_css_js( $src ) {
 		if ( strpos( $src, 'ver=' ) )
@@ -116,16 +127,22 @@
 				'contact-form-7' !== $handle &&
 				'cookie-law-info' !== $handle &&
 				'ppress-flatpickr' !== $handle &&
+				'ppress-frontend-script' !== $handle &&
 				'ppress-select2' !== $handle &&
 				'sgr_main' !== $handle &&
 				'wpml-legacy-dropdown-0' !== $handle &&
 				'stripe' !== $handle &&
 				'sib-front-js' !== $handle &&
+				'chunk-vendors' !== $handle &&
+				'vue' !== $handle &&
+				'social_warfare_script' !== $handle &&
+				'wpcf7-recaptcha' !== $handle &&
+				'app' !== $handle &&
 				'regenerator-runtime' !== $handle ))
 		return $tag;
 		return str_replace( ' src', ' defer="defer" src', $tag );
 	}
-
+	
 	/* Enable custom theme supports */
 	function bones_theme_support() {
 		add_theme_support( 'post-thumbnails' );
@@ -185,7 +202,6 @@
 	function ppress_frontend_deregister_styles() {
 		wp_deregister_style( 'ppress-frontend' );
 	}
-
 	
 	/* --------------------------
 	   CLEANUP PROCESS
