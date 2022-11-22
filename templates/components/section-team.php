@@ -40,13 +40,14 @@
 				</div>
 
 				<div class="team-role">
-					<span class="role--blue">employé.e.s</span>
-					<span class="role--sand">bénévoles</span>
+					<span class="role--blue">Employé·e·s</span>
+					<span class="role--sand">Bénévoles</span>
 				</div>
 
 				<?php
 					while( have_rows('onglets') ): the_row();
 					$texte = get_sub_field('texte_de_longlet');
+					$outro_de_longlet = get_sub_field('outro_de_longlet');
 				?>
 					<div class="list-el cg-onglets_content <?php if ($counter_div == 1) : ?>active<?php endif; ?>"  id="contenu_onglet_<?php echo $counter_div; ?>-<?php echo $flexible_count; ?>">
 						<?php
@@ -71,14 +72,21 @@
 									<?php echo $name; ?>
 								</span>
 								<span class="inner-desc">
-									<?php echo $desc; ?>
+									
 								</span>
 							</div>
 						<?php
 							endwhile;
 							endif;
 						?>
+
+						<div class="ongletscontent-outro cbo-cms">
+							<?php echo $outro_de_longlet; ?>
+						</div>
 					</div>
+
+
+					
 				<?php 
 					$counter_div++;
 					endwhile;
