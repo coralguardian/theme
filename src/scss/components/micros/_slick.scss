@@ -33,9 +33,10 @@
 
         li{
             margin:0 5px;
-            height: 10px;
-            width: 10px;
+            height: 20px;
+            width: 20px;
             border-radius: 10px;
+            cursor: pointer;
             background:$colorwhite;
             font-size: 0;
             transition: .5s $easeinout;
@@ -45,6 +46,9 @@
             }
             &.slick-active{
                 background:$lightgreen;
+            }
+            button{
+                display: none;
             }
         }
     }

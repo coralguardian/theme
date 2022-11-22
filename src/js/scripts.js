@@ -36,10 +36,10 @@ $(document).ready(function() {
 	/////////////////// SMARTPHONE NAVIGATION ///////////////////
 	$('header .burger-menu').on('click', function(){
 		$('.header-nav').toggleClass('header-nav-open');
-	});
-	$('.burger-menu').on('click', function(){
 		$('.burger-menu').toggleClass('burger-menu-cross');
+		$('body').toggleClass('body-popin-open');
 	});
+
 	
 	$('.menu-item-has-children').on('click', function(e){
 		$(this).find('a').toggleClass('link-open');

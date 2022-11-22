@@ -14,7 +14,7 @@
     // Register menu
     /* ************************* */
     register_nav_menus(array(
-        'Smartphone' => 'Menu Smartphone',
+        'main-nav' => 'Menu Principal',
     ));
 
     	/* ************************* */

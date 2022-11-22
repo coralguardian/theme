@@ -1,7 +1,7 @@
 <?php
 	global $flexible_count;
 	$title		= get_sub_field('title');
-	$scrolllink	= get_sub_field('scroll_link');
+	$outro	= get_sub_field('outro');
 ?>
 <section id="section-<?php echo $flexible_count; ?>" class="cbo-sectionteam">
 	<div class="cbo-container">
@@ -85,5 +85,11 @@
 				?>
 			</div>
 		<?php endif; ?>
+
+		<?php if( get_sub_field('outro') ): ?>
+			<div class="cbo-chapo slide-up">
+				<?php echo $outro ?>
+			</div>
+		<?php endif; ?>	
 	</div>
 </section>
