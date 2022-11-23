@@ -16,7 +16,7 @@
 							<?php echo $title ?>
 						</div>
 						<?php if( get_sub_field('texte_dintroduction') ): ?>
-							<div class="cbo-chapo slide-up">
+							<div class="cbo-chapo">
 								<?php echo $desc ?>
 							</div>
 						<?php endif; ?>
@@ -32,7 +32,7 @@
 					<?php echo $title ?>
 				</div>
 				<?php if( get_sub_field('texte_dintroduction') ): ?>
-					<div class="cbo-chapo slide-up">
+					<div class="cbo-chapo">
 						<?php echo $desc ?>
 					</div>
 				<?php endif; ?>
