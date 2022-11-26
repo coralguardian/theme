@@ -11,7 +11,9 @@ PRESSE SECTION COMPONENTS
 		justify-content: center;
 
 		.el-inner{
-			width: 48%;
+			width: 100%;
+			max-width: 300px;
+			margin: 0 auto;
 			padding: 10px 0;
 			display: block;
 			color: $colorblack;
@@ -67,6 +69,8 @@ SMALL SCREENS
 			width: calc(100% - -10px);
 
 			.el-inner{
+				max-width: inherit;
+				margin: 0 ;
 				width: 33.33333%;
 				padding: 10px;
 			}

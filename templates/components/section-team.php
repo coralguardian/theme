@@ -72,7 +72,7 @@
 									<?php echo $name; ?>
 								</span>
 								<span class="inner-desc">
-									
+									<?php echo $desc; ?>
 								</span>
 							</div>
 						<?php
@@ -84,9 +84,6 @@
 							<?php echo $outro_de_longlet; ?>
 						</div>
 					</div>
-
-
-					
 				<?php 
 					$counter_div++;
 					endwhile;

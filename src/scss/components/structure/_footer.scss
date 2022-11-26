@@ -60,7 +60,9 @@ footer{
 						width: 100%;
 						margin:15px 0 0 0;
 					}
-					
+					input[type="email"]{
+						margin: 0;
+					}
 					.so-terms{
 						margin:15px 0 0 0;
 						font-size: 14px;
@@ -148,14 +150,9 @@ footer{
 						flex-wrap: wrap;
 
 						input{
-							width: 48%;
 							margin: 0;
 						}
-
-						input[type=email]{
-							margin-right: 2%;
-						}
-
+						
 						input[type=submit]{
 							margin:15px 0 0 0;
 							width: 100%;
