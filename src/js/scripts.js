@@ -240,42 +240,42 @@ $(document).ready(function() {
 	});
 
 	/////////////////// MAPBOX ///////////////////
-		if ($('body #map').length > 0){
-			mapboxgl.accessToken = 'pk.eyJ1IjoiMjBoMjAiLCJhIjoiY2tkNzBjODBjMDByNjJybnY3c2I0YWhzdyJ9.i-WnsBScxrVs7RjUQnkBnQ';
-			var map = new mapboxgl.Map({
-				container: 'map',
-				zoom: 4,
-				center: [119.877830, -8.400699],
-				style: 'mapbox://styles/mapbox/satellite-v9',
-			});
+		// if ($('body #map').length > 0){
+		// 	mapboxgl.accessToken = 'pk.eyJ1IjoiMjBoMjAiLCJhIjoiY2tkNzBjODBjMDByNjJybnY3c2I0YWhzdyJ9.i-WnsBScxrVs7RjUQnkBnQ';
+		// 	var map = new mapboxgl.Map({
+		// 		container: 'map',
+		// 		zoom: 4,
+		// 		center: [119.877830, -8.400699],
+		// 		style: 'mapbox://styles/mapbox/satellite-v9',
+		// 	});
 
-			map.on('load', function() {
-				map.loadImage('../wp-content/themes/coralguardian/library/img/marker.png', function(error, image) {
-					if (error) throw error;
-					map.addImage('marker', image);
-					map.addLayer({
-						"id": "points",
-						"type": "symbol",
-						"source": {
-							"type": "geojson",
-							"data": {
-								"type": "FeatureCollection",
-								"features": [{
-									"type": "Feature",
-									"geometry": {
-										"type": "Point",
-										"coordinates": [119.877830, -8.400699]
-									}
-								}]
-							}
-						},
-						"layout": {
-							"icon-image": "marker",
-							"icon-size": 1
-						}
-					});
-				});
-			});
-		}
+		// 	map.on('load', function() {
+		// 		map.loadImage('../wp-content/themes/coralguardian/library/img/marker.png', function(error, image) {
+		// 			if (error) throw error;
+		// 			map.addImage('marker', image);
+		// 			map.addLayer({
+		// 				"id": "points",
+		// 				"type": "symbol",
+		// 				"source": {
+		// 					"type": "geojson",
+		// 					"data": {
+		// 						"type": "FeatureCollection",
+		// 						"features": [{
+		// 							"type": "Feature",
+		// 							"geometry": {
+		// 								"type": "Point",
+		// 								"coordinates": [119.877830, -8.400699]
+		// 							}
+		// 						}]
+		// 					}
+		// 				},
+		// 				"layout": {
+		// 					"icon-image": "marker",
+		// 					"icon-size": 1
+		// 				}
+		// 			});
+		// 		});
+		// 	});
+		// }
 });
 

@@ -4,7 +4,7 @@
 	add_filter( 'the_generator', 'cbo_remove_rss_version' );
 	add_filter( 'protected_title_format', 'cbo_remove_protected_text' );
 	add_filter( 'gallery_style', 'cbo_remove_gallery_style' );
-	add_filter( 'script_loader_tag', 'cbo_add_defer_attribute', 10, 2 );
+	// add_filter( 'script_loader_tag', 'cbo_add_defer_attribute', 10, 2 );
 	remove_filter('pre_term_description', 'wp_filter_kses');
 	remove_filter('term_description', 'wp_kses_data');
 
@@ -31,7 +31,7 @@
 		wp_enqueue_script( 'ppress-flatpickr', 'https://www.coralguardian.org/app/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.js?ver=5.9.3', array(), '1.0.0', true );
 		wp_enqueue_script( 'ppress-select2', 'https://www.coralguardian.org/app/plugins/wp-user-avatar/assets/select2/select2.min.js?ver=5.9.3', array(), '1.0.0', true );
 		wp_enqueue_script( 'wpml-legacy-dropdown-0', 'https://www.coralguardian.org/app/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/script.min.js?ver=1', array(), '1.0.0', true );
-		wp_enqueue_script( 'stripe', 'https://js.stripe.com/v3/', array(), '1.0.0', true );
+		// wp_enqueue_script( 'stripe', 'https://js.stripe.com/v3/', array(), '1.0.0', true );
 	}
 	add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 
@@ -118,30 +118,29 @@
 		}
 	}
 
-	/* Add defer attr on scripts */
-	function cbo_add_defer_attribute($tag, $handle) {
-		if (is_admin() || (
-				'jquery-core' !== $handle &&
-				'jquery-migrate' !== $handle &&
-				'bones-scripts' !== $handle &&
-				'contact-form-7' !== $handle &&
-				'cookie-law-info' !== $handle &&
-				'ppress-flatpickr' !== $handle &&
-				'ppress-frontend-script' !== $handle &&
-				'ppress-select2' !== $handle &&
-				'sgr_main' !== $handle &&
-				'wpml-legacy-dropdown-0' !== $handle &&
-				'stripe' !== $handle &&
-				'sib-front-js' !== $handle &&
-				'chunk-vendors' !== $handle &&
-				'vue' !== $handle &&
-				'social_warfare_script' !== $handle &&
-				'wpcf7-recaptcha' !== $handle &&
-				'app' !== $handle &&
-				'regenerator-runtime' !== $handle ))
-		return $tag;
-		return str_replace( ' src', ' defer="defer" src', $tag );
-	}
+	// /* Add defer attr on scripts */
+	// function cbo_add_defer_attribute($tag, $handle) {
+	// 	if (is_admin() || (
+	// 			'jquery-core' !== $handle &&
+	// 			'jquery-migrate' !== $handle &&
+	// 			'bones-scripts' !== $handle &&
+	// 			'contact-form-7' !== $handle &&
+	// 			'cookie-law-info' !== $handle &&
+	// 			'ppress-flatpickr' !== $handle &&
+	// 			'ppress-frontend-script' !== $handle &&
+	// 			'ppress-select2' !== $handle &&
+	// 			'sgr_main' !== $handle &&
+	// 			'wpml-legacy-dropdown-0' !== $handle &&
+	// 			'stripe' !== $handle &&
+	// 			'sib-front-js' !== $handle &&
+	// 			'chunk-vendors' !== $handle &&
+	// 			'vue' !== $handle &&
+	// 			'social_warfare_script' !== $handle &&
+	// 			'app' !== $handle &&
+	// 			'regenerator-runtime' !== $handle ))
+	// 	return $tag;
+	// 	return str_replace( ' src', ' defer="defer" src', $tag );
+	// }
 	
 	/* Enable custom theme supports */
 	function bones_theme_support() {
