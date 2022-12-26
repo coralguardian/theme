@@ -25,6 +25,13 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/library/img/fav/favicon-16x16.png">
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28782686-1"></script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-MGK23Q9');</script>
+		<!-- End Google Tag Manager -->
 		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
@@ -52,6 +59,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(''); ?> itemscope itemtype="http://schema.org/WebPage">
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGK23Q9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<header>
 			<div class="header-top">
 				<a class="cbo-button green-button header-button" href="<?php the_field('donation_url', 'option'); ?>">
