@@ -89,7 +89,7 @@
 					<span class="bottom"></span>
 				</button>
 				<nav class="header-nav">
-				<a class="cbo-button border-button header-button" href="<?php the_field('adoption_url', 'option'); ?>">
+					<a class="cbo-button border-button header-button" href="<?php the_field('adoption_url', 'option'); ?>">
 						<i class="icon icon--certificat"></i><?php the_field('txt_adoptebt', 'option'); ?>
 					</a>
 					<a class="cbo-button border-button header-button" href="<?php the_field('gift_url', 'option'); ?>">
