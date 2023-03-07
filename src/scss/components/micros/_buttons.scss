@@ -11,7 +11,7 @@ BUTTONS COMPONENT
 	justify-content: center;
 	height: 50px;
 	text-align: center;
-	border-radius: 6px;
+	border-radius: 99rem;
 	color: $colorblack;
 	text-transform: uppercase;
 	padding:0 20px;
@@ -91,5 +91,9 @@ BUTTONS COMPONENT
 	&.lightblue-button{
 		background-color: $lightblue;
 		color: $darkblue;
+	}
+	&.button--underline{
+		text-decoration: underline;
+		background: none;
 	}
 }

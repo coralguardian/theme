@@ -68,8 +68,8 @@
 				<a class="cbo-button border-button header-button" href="<?php the_field('adoption_url', 'option'); ?>">
 					<i class="icon icon--certificat"></i><?php the_field('txt_adoptebt', 'option'); ?>
 				</a>
-				<a class="cbo-button border-button header-button" href="<?php the_field('gift_url', 'option'); ?>">
-					<i class="icon icon--gift"></i><?php the_field('txt_giftbt', 'option'); ?>
+				<a class="cbo-button button--underline header-button" href="<?php the_field('gift_url', 'option'); ?>">
+					<?php the_field('txt_giftbt', 'option'); ?>
 				</a>
 			</div>
 

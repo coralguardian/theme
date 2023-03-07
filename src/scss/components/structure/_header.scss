@@ -91,8 +91,9 @@ header{
 			margin-right: 8px;
 		}
 	}
-	.border-button{
+	.cbo-button.border-button{
 		background: $lightblue;
+		box-shadow: none;
 	}
 	.header-nav{
 		display: block;
