@@ -62,7 +62,7 @@
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGK23Q9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<header>
 			<div class="header-top">
-				<a class="cbo-button green-button header-button" href="<?php the_field('donation_url', 'option'); ?>">
+				<a class="cbo-button darkblue-button header-button" href="<?php the_field('donation_url', 'option'); ?>">
 					<i class="icon icon--donation"></i><?php the_field('txt_donationbt', 'option'); ?>
 				</a> 
 				<a class="cbo-button border-button header-button" href="<?php the_field('adoption_url', 'option'); ?>">

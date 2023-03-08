@@ -95,5 +95,10 @@ BUTTONS COMPONENT
 	&.button--underline{
 		text-decoration: underline;
 		background: none;
+		color: $darkblue;
+
+		&:after{
+			display: none;
+		}
 	}
 }
