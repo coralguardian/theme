@@ -38,8 +38,8 @@
 							<?php if( get_sub_field('pic') ): ?>
 								<div class="inner-picture cbo-picture-contain">
 									<img
-										src="<?php echo $pic['sizes']['thumbnail']; ?>"
-										srcset="<?php echo $pic['sizes']['thumbnail'] ?> 320w, <?php echo $pic['sizes']['thumbnail'] ?> 768w, <?php echo $pic['sizes']['thumbnail'] ?> 1024w, <?php echo $pic['sizes']['thumbnail'] ?> 1280w"
+										src="<?php echo $pic['sizes']['xsmall']; ?>"
+										srcset="<?php echo $pic['sizes']['xsmall'] ?> 320w, <?php echo $pic['sizes']['xsmall'] ?> 768w, <?php echo $pic['sizes']['xsmall'] ?> 1024w, <?php echo $pic['sizes']['xsmall'] ?> 1280w"
 										alt="<?php echo $pic["alt"]; ?>"
 										loading="lazy"
 										width="100px" height="100px"
