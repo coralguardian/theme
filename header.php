@@ -79,9 +79,13 @@
 					<img class="logo-desktop" src="<?php bloginfo('template_directory'); ?>/library/img/logo-coral-guardian.svg" alt="Coral Guardian" itemprop="logo" width="120" height="54" loading="lazy"/>
 				</a>
 
-				<a class="cbo-button green-button header-button" href="<?php the_field('donation_url', 'option'); ?>">
-					<i class="icon icon--donation"></i><?php the_field('txt_donationbt', 'option'); ?>
-				</a>
+				<div class="main-center">
+					<a class="cbo-button lightblue-button header-button" href="<?php the_field('donation_url', 'option'); ?>">
+						<i class="icon icon--donation"></i><?php the_field('txt_donationbt', 'option'); ?>
+					</a>
+
+					<?php if ( do_action('wpml_add_language_selector') ) : else : ?><?php endif; ?>
+				</div>
 
 				<button type="button" class="burger-menu">
 					<span class="top"></span>
@@ -103,7 +107,21 @@
 					)); ?>
 				</nav>
 			</div>
+
+
+
+
+
+
+
+
 		</header>
+
+
+
+
+
+
 
 		<div class="cg-overlay-search">
 			<button type="button" class="search-close">
