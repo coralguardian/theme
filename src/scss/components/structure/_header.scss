@@ -14,6 +14,11 @@ header{
 	&.header-scroll{
 		border-bottom: 1px solid $lightblue;
 	}
+	&.active{
+		.header-main .main-center .wpml-ls ul li a{
+			color: $colorwhite;
+		}
+	}
 	.header-top{
 		display: none;
 	}
@@ -58,13 +63,15 @@ header{
 			}
 			.wpml-ls{
 				width: auto;
+				position: relative;
+				z-index: 2;
 
 				ul{
 					li{
 						padding-left: 10px;
 
 						a{
-							border: none;
+							background: none;
 							border: none;
 							color: $darkblue;
 							line-height: 16px;
@@ -159,70 +166,30 @@ header{
 		}
 		.border-button{
 			display: flex;
-			max-width: 300px;
-			margin: 0 auto 20px auto;
+			margin: 0 0 20px 0;
+			width: fit-content;
 		}
 		ul{			
 			li{
-				&.current_page_parent{
-					a{
-						color:$currentblue;
-						font-weight: bold;
-					}
-				}
 				a{
+					font-weight: bold;
 					margin: 12px 0;
+					display: block;
+					width: 100%;
+					text-align: left;
 					color: $colorwhite;
-					display: inline-flex;
-					align-items: center;
-					position: relative;
-
-					.wpml-ls-flag{
-						margin-right: 10px;
-					}
-				}
-				&.menu-item-has-children {
-					a{
-						&:after{
-							font-family:"icons";
-							content: '\f10d';
-							font-size: 10px;
-							line-height: 10px;
-							position: absolute;
-							right: -20px;
-							transition: .5s $easeinout;
-						}
-						&.link-open{
-							&:after{
-								transform: rotate(180deg);
-							}
-						}
-					}
 				}
 				.sub-menu{
-					display: none;
-					padding: 6px 0;
-					background-color: rgba($colorblack, 0.1);
+					margin-top: -10px;
+					margin-bottom: 20px;
 
 					li{
 						a{
-							margin: 6px 0;
+							font-weight: 100;
+							margin: 0;
 							font-size: 14px;
-							
-							&:after{
-								display: none;
-							}
 						}
 					}
-					&.sub-menu_open{
-						display: block;
-					}
-				}
-				&.current-menu-item{
-					a{
-						color:$currentblue;
-						font-weight: bold;
-					}					
 				}
 			}
 		}
@@ -351,6 +318,7 @@ LARGE SCREENS
 						align-items: center;
 
 						a{
+							font-weight: 100;
 							padding:0 10px;
 							margin: 0;
 							color: $darkblue;
@@ -368,12 +336,8 @@ LARGE SCREENS
 							font-weight: bold;
 						}
 						&.menu-item-has-children{
-							a{
-								&:after{
-									display: none;
-								}
-							}
 							.sub-menu{
+								margin: 0;
 								display: block;
 								opacity: 0;
 								visibility: hidden;
@@ -393,6 +357,7 @@ LARGE SCREENS
 									transition: .4s cubic-bezier(.165,.84,.44,1) .3s;
 
 									a{
+										margin: 6px 0;
 										color: $darkblue;
 										padding: 10px 15px;
 										line-height: 16px;

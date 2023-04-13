@@ -37,24 +37,9 @@ $(document).ready(function() {
 	$('header .burger-menu').on('click', function(){
 		$('.header-nav').toggleClass('header-nav-open');
 		$('.burger-menu').toggleClass('burger-menu-cross');
+		$('header').toggleClass('active');
 		$('body').toggleClass('body-popin-open');
 	});
-
-	
-	$('.menu-item-has-children').on('click', function(e){
-		$(this).find('a').toggleClass('link-open');
-		e.stopPropagation();
-	});
-	
-	$('.menu-item-has-children').on('click', function(e){
-		$(this).find('.sub-menu').toggleClass('sub-menu_open');
-		e.stopPropagation();
-	});
-	if ($(window).width() < 1280) {
-		$('.menu-item-has-children > a').on('click', function(e) {
-			e.preventDefault();
-		});
-	}
 
 	/////////////////// SLIDER ACTUS ///////////////////
 	$('.cbo-sectionrelation .sectionrelation-listing').slick({
