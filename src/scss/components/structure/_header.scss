@@ -8,15 +8,21 @@ header{
     z-index: 777;
     width: 100%;
 	height: 68px;
-    padding:8px 20px;
 	transition: .5s $easeinout;
 	
 	&.header-scroll{
 		border-bottom: 1px solid $lightblue;
 	}
 	&.active{
-		.header-main .main-center .wpml-ls ul li a{
+		.header-main .main-inner .main-center .wpml-ls ul li a{
 			color: $colorwhite;
+		}
+		.header-main{
+			.main-inner{
+				background:$darkblue;
+				position: relative;
+				z-index: 2;
+			}
 		}
 	}
 	.header-top{
@@ -36,113 +42,115 @@ header{
 		}
 	}
 	.header-main{
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		height: 100%;
 
-		.header-logo{
-			position: relative;
-			z-index: 9;
-	
-			img{
-				width: 48px;
-				height: 48px;
-				display: block;
-				transition: all .5s cubic-bezier(.85,0,.15,1);
-			}
-			.logo-desktop{
-				display: none;
-			}
-		}
-		.main-center{
+		.main-inner{
+			height: 100%;
 			display: flex;
 			align-items: center;
+			justify-content: space-between;
+			padding:8px 20px;
 
-			.header-button{
-				margin-right: 15px;
-			}
-			.wpml-ls{
-				width: auto;
+			.header-logo{
 				position: relative;
-				z-index: 2;
-
-				ul{
-					li{
-						padding-left: 10px;
-
-						a{
-							background: none;
-							border: none;
-							color: $darkblue;
-							line-height: 16px;
-							font-weight: 700;
-							font-size: 14px;
-							padding-left: 0;
-
-							&:hover{
+				z-index: 9;
+		
+				img{
+					width: 48px;
+					height: 48px;
+					display: block;
+					transition: all .5s cubic-bezier(.85,0,.15,1);
+				}
+				.logo-desktop{
+					display: none;
+				}
+			}
+			.main-center{
+				display: flex;
+				align-items: center;
+	
+				.header-button{
+					margin-right: 15px;
+				}
+				.wpml-ls{
+					width: auto;
+					position: relative;
+					z-index: 2;
+	
+					ul{
+						li{
+							padding-left: 10px;
+	
+							a{
 								background: none;
-							}
-						}
-						ul{
-							li{
+								border: none;
+								color: $darkblue;
+								line-height: 16px;
+								font-weight: 700;
+								font-size: 14px;
 								padding-left: 0;
-
-								a{
-									padding-left: 10px;
+	
+								&:hover{
+									background: none;
+								}
+							}
+							ul{
+								li{
+									padding-left: 0;
+	
+									a{
+										padding-left: 10px;
+									}
 								}
 							}
 						}
 					}
 				}
 			}
-		}
-		.burger-menu{
-			display: flex;
-			justify-content: center;
-			position: relative;
-			width: 32px;
-			height: 23px;
-			z-index: 7;
-			position: relative;
-	
-			.top,
-			.middle,
-			.bottom{
-				background: $colorblack;
-				height:3px;
-				border-radius: 99rem;
-				width: 100%;
-				left: 0;
-				position:absolute;
-				transition:all .3s; 
-			}
-			.middle{
-				top:10px;
-			}
-			.bottom{
-				top:19px;
-			}
-			&.burger-menu-cross{
-				.top,.bottom{
-					background: $colorwhite;
-					top: 10px;
-					transform-origin: 50% 50% 0px;
-				}
-				.top{
-					transform: rotate3d(0, 0, 1, 45deg);
+			.burger-menu{
+				display: flex;
+				justify-content: center;
+				position: relative;
+				width: 32px;
+				height: 23px;
+				z-index: 7;
+				position: relative;
+		
+				.top,
+				.middle,
+				.bottom{
+					background: $colorblack;
+					height:3px;
+					border-radius: 99rem;
+					width: 100%;
+					left: 0;
+					position:absolute;
+					transition:all .3s; 
 				}
 				.middle{
-					opacity:0;
+					top:10px;
 				}
 				.bottom{
-					transform: rotate3d(0, 0, 1, -45deg);
+					top:19px;
+				}
+				&.burger-menu-cross{
+					.top,.bottom{
+						background: $colorwhite;
+						top: 10px;
+						transform-origin: 50% 50% 0px;
+					}
+					.top{
+						transform: rotate3d(0, 0, 1, 45deg);
+					}
+					.middle{
+						opacity:0;
+					}
+					.bottom{
+						transform: rotate3d(0, 0, 1, -45deg);
+					}
 				}
 			}
 		}
-	}
-	.cbo-button.border-button{
-		background: $lightblue;
-		box-shadow: none;
 	}
 	.header-nav{
 		-webkit-overflow-scrolling: touch;
@@ -224,37 +232,41 @@ MEDIUM SCREENS
 		.header-main{
 			padding: 10px 30px;
 
-			.header-logo{
-				&:after{
-					font-family:"icons";
-					content: "\f10b";
-					font-weight: 100;
-					font-size: 68px;
-					line-height: 68px;
-					transform:translateY(-300px);
-					color: $colorblack;
-					position: absolute;
-					top: 0;
-					transition: all .5s cubic-bezier(.85,0,.15,1);
-				}
-				img{
-					width: 180px;
-					height: 68px;
-				}
-				.logo-desktop{
-					display: block;
-				}
-				.logo-mobile{
-					display: none;
-				}
-			}
-			.main-center{
-				width: 100%;
-				justify-content: flex-end;
-				padding-right: 15px;
+			.main-inner{
+				padding: 0;
 
-				.cbo-button{
-					display: none;
+				.header-logo{
+					&:after{
+						font-family:"icons";
+						content: "\f10b";
+						font-weight: 100;
+						font-size: 68px;
+						line-height: 68px;
+						transform:translateY(-300px);
+						color: $colorblack;
+						position: absolute;
+						top: 0;
+						transition: all .5s cubic-bezier(.85,0,.15,1);
+					}
+					img{
+						width: 180px;
+						height: 68px;
+					}
+					.logo-desktop{
+						display: block;
+					}
+					.logo-mobile{
+						display: none;
+					}
+				}
+				.main-center{
+					width: 100%;
+					justify-content: flex-end;
+					padding-right: 15px;
+	
+					.cbo-button{
+						display: none;
+					}
 				}
 			}
 			.header-nav{
@@ -283,13 +295,23 @@ LARGE SCREENS
 @media (min-width: $screen-lg-min) {
 	header{		
 		.header-main{
-			.burger-menu{
-				display:none;
-			}
-			.main-center{
-				width: 100px;
-				order: 3;
-				padding: 0;
+			position: relative;
+			height: 88px;
+			display: flex;
+			align-items: center;
+
+			.main-inner{
+				position: absolute;
+				width: calc(100% - 30px);
+
+				.burger-menu{
+					display:none;
+				}
+				.main-center{
+					position: absolute;
+					right: 30px;
+					padding: 0;
+				}
 			}
 			.header-nav{
 				width: 100%;
@@ -299,7 +321,7 @@ LARGE SCREENS
 				position: relative;
 				overflow: visible;
 				transform:translate(0, 0px);
-				padding: 0;
+				padding: 0 100px 0 0;
 				flex-direction: inherit;
 				height: auto;
 

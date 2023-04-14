@@ -74,24 +74,26 @@
 			</div>
 
 			<div class="header-main">
-				<a class="header-logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">
-					<img class="logo-mobile" src="<?php bloginfo('template_directory'); ?>/library/img/logo-coral-guardian-small-white.svg" alt="Coral Guardian" itemprop="logo" width="120" height="54" loading="lazy"/>
-					<img class="logo-desktop" src="<?php bloginfo('template_directory'); ?>/library/img/logo-coral-guardian.svg" alt="Coral Guardian" itemprop="logo" width="120" height="54" loading="lazy"/>
-				</a>
-
-				<div class="main-center">
-					<a class="cbo-button lightblue-button header-button" href="<?php the_field('donation_url', 'option'); ?>">
-						<i class="icon icon--donation"></i><?php the_field('txt_donationbt', 'option'); ?>
+				<div class="main-inner">
+					<a class="header-logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">
+						<img class="logo-mobile" src="<?php bloginfo('template_directory'); ?>/library/img/logo-coral-guardian-small-white.svg" alt="Coral Guardian" itemprop="logo" width="120" height="54" loading="lazy"/>
+						<img class="logo-desktop" src="<?php bloginfo('template_directory'); ?>/library/img/logo-coral-guardian.svg" alt="Coral Guardian" itemprop="logo" width="120" height="54" loading="lazy"/>
 					</a>
 
-					<?php if ( do_action('wpml_add_language_selector') ) : else : ?><?php endif; ?>
-				</div>
+					<div class="main-center">
+						<a class="cbo-button lightblue-button header-button" href="<?php the_field('donation_url', 'option'); ?>">
+							<i class="icon icon--donation"></i><?php the_field('txt_donationbt', 'option'); ?>
+						</a>
 
-				<button type="button" class="burger-menu">
-					<span class="top"></span>
-					<span class="middle"></span>
-					<span class="bottom"></span>
-				</button>
+						<?php if ( do_action('wpml_add_language_selector') ) : else : ?><?php endif; ?>
+					</div>
+
+					<button type="button" class="burger-menu">
+						<span class="top"></span>
+						<span class="middle"></span>
+						<span class="bottom"></span>
+					</button>
+				</div>
 				<nav class="header-nav">
 					<a class="cbo-button border-button header-button" href="<?php the_field('adoption_url', 'option'); ?>">
 						<i class="icon icon--certificat"></i><?php the_field('txt_adoptebt', 'option'); ?>
