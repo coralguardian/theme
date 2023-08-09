@@ -113,20 +113,6 @@ $(document).ready(function() {
 		$('.cg-overlay-search').removeClass('cg-overlay-search-open');
 	});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	//////////////// MODALE NEWSLETTER ////////////////
 	$('.modale-close').on('click', function() {
 		$('.modale-overlay').removeClass('overlay--open');
@@ -152,9 +138,10 @@ $(document).ready(function() {
 
 		$(document).ready(function(){
 			var bandeauCookie = getCookie("bandeauCookie");
-			//var popup = getCookie("popup_home_evok");
 			if (!bandeauCookie) {
-				$("#myModal").show();
+				setTimeout(function() {
+					$('#myModal').show();
+				},10000);
 				$("#myModal-close").click(function(){
 					setCookie("bandeauCookie", 1, 0);
 					$("#myModal").fadeOut('fast');
@@ -163,18 +150,9 @@ $(document).ready(function() {
 				$("#myModal").hide();
 			}
 		});
+
+		
 	})(jQuery);
-
-
-
-
-
-
-
-
-
-
-
 
 
 	//////////////// SCROLL ANIMATIONS ////////////////
