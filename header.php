@@ -60,6 +60,28 @@
 	</head>
 	<body <?php body_class(''); ?> itemscope itemtype="http://schema.org/WebPage">
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGK23Q9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="myModal" class="modale-newsletter" role="dialog">
+			<div class="newsletter-inner">
+
+				<div class="newsletter-content">
+					<div class="content-close" id="myModal-close">
+						<span class="top"></span>
+						<span class="bottom"></span>
+					</div>
+
+					<div class="content-title cbo-title-2">
+						<?php the_field('popin_newsletter_title', 'option'); ?>
+					</div>
+
+					<div class="content-form">
+						<?php the_field('popin_newsletter_shortcode', 'option'); ?>
+					</div>
+				</div>
+			</div>
+			<div class="modale-overlay"></div>
+		</div>
+
 		<header>
 			<div class="header-top">
 				<a class="cbo-button darkblue-button header-button" href="<?php the_field('donation_url', 'option'); ?>">
@@ -109,21 +131,7 @@
 					)); ?>
 				</nav>
 			</div>
-
-
-
-
-
-
-
-
 		</header>
-
-
-
-
-
-
 
 		<div class="cg-overlay-search">
 			<button type="button" class="search-close">
