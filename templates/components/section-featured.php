@@ -25,20 +25,26 @@
 			<?php endif; ?>
 			
 			<div class="cg-featured slide-up <?php echo $size ?> featured-<?php echo $featcolor ?>">
-				<span class="featured-surtitre">
-					<?php echo $featsurtit ?>
-				</span>
-				<span class="featured-title">
-					<?php echo $feattitle ?>
-				</span>
-				<div class="blocs-container">
-					<?php foreach($blocs as $bloc): ?>
+				<?php if( get_sub_field('surtitre') ): ?>
+					<span class="featured-surtitre">
+						<?php echo $featsurtit ?>
+					</span>
+				<?php endif; ?>
+
+				<?php if( get_sub_field('titre_du_cadre') ): ?>
+					<span class="featured-title">
+						<?php echo $feattitle ?>
+					</span>
+				<?php endif; ?>
+
+				<?php foreach($blocs as $bloc): ?>
+					<div class="blocs-container">
 						<div class="bloc">
 							<span class="featured-round"></span>
 							<span class="bloc-txt"><?php echo $bloc["txt"]; ?></span>
 						</div>
-					<?php endforeach; ?>
-				</div>
+					</div>
+				<?php endforeach; ?>
 			</div>
 		</div>
 	</div>

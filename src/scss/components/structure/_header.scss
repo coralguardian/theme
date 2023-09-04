@@ -221,12 +221,14 @@ MEDIUM SCREENS
 		}
 		&.header-scroll{
 			.header-main{
-				.header-logo{
-					img{
-						transform: translateY(-300px);
-					}
-					&:after{
-						transform: translateY(0);
+				.main-inner{
+					.header-logo{
+						img{
+							transform: translateY(-300px);
+						}
+						&:after{
+							transform: translateY(0);
+						}
 					}
 				}
 			}

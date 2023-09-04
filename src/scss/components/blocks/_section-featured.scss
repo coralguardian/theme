@@ -7,6 +7,9 @@ SECTION FEATURED COMPONENTS
 		padding: 20px;
 		text-align: center;
 
+		&.featured-white{
+			color: $darkblue;
+		}
 		.featured-surtitre{
 			display: block;
 			margin-bottom: 30px;

@@ -46,7 +46,7 @@
 						<?php if( get_sub_field('bloc_url') ): ?>
 							<a class="inner-content" href="<?php echo $url ?>">
 						<?php else : ?>
-							<span class="inner-content">
+							<div class="inner-content">
 						<?php endif; ?>
 
 							<?php if( get_sub_field('ajouter_une_image') ): ?>
@@ -78,7 +78,7 @@
 						<?php if( get_sub_field('bloc_url') ): ?>
 							</a>
 						<?php else : ?>
-							</span>
+							</div>
 						<?php endif; ?>
 					</div>
 				<?php

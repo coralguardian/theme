@@ -68,7 +68,12 @@
 					//  SECTION PARTENAIRES
 					elseif( get_row_layout() == 'tranche_partenaires' ): 
 						get_template_part( 'templates/components/section-partenaires');
-		
+
+					///////////////////
+					//  SECTION PARTENAIRES ENRICHI
+					elseif( get_row_layout() == 'tranche_partnersrich' ): 
+						get_template_part( 'templates/components/section-partnersrich');
+	
 					///////////////////
 					//  SECTION TEAM
 					elseif( get_row_layout() == 'tranche_equipe' ): 
