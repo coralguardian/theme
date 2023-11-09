@@ -56,6 +56,18 @@
 		<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=693436517874437&ev=PageView&noscript=1"/></noscript>
 		<!-- End Facebook Pixel Code -->
 
+		<!-- Hotjar Tracking Code for https://www.coralguardian.org/ -->
+		<script>
+			(function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:3689720,hjsv:6};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(''); ?> itemscope itemtype="http://schema.org/WebPage">
