@@ -25,7 +25,7 @@
 		
 		<div class="footer-bottom">
 			&copy; <a href="<?php bloginfo(); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a> <?php echo date('Y'); ?>  -
-			<a href="<?php bloginfo(); ?>/mentions-legales-et-conditions-generales-dutilisation/">Mentions légales</a>
+			<a href="<?php echo home_url(); ?>/mentions-legales-et-conditions-generales-dutilisation/">Mentions légales</a>
 		</div>
 	</footer>
 

@@ -23,7 +23,7 @@
 			<?php endif; ?>
 
 			<?php if( get_sub_field('zone_de_texte') ): ?>
-				<div class="sectiontxt-content cbo-cms slide-up <?php echo $txtsize ?>">
+				<div class="sectiontxt-content cbo-cms <?php echo $txtsize ?>">
 					<?php echo $txt ?>
 				</div>
 			<?php endif; ?>

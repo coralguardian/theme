@@ -156,18 +156,3 @@
 				</nav>
 			</div>
 		</header>
-
-		<div class="cg-overlay-search">
-			<button type="button" class="search-close">
-				<i class="icon icon--close"></i>
-			</button>
-			<form role="search" method="get" class="searchform" action="<?php echo home_url( '/' ); ?>">
-				<?php if(ICL_LANGUAGE_CODE=='fr'): ?>
-					<input name="s" id="s" type="text" placeholder="<?php _e('Votre recherche'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
-					<button class="button ripple green-button" type="submit">Rechercher</button>
-				<?php elseif(ICL_LANGUAGE_CODE=='en'): ?>
-					<input name="s" id="s" type="text" placeholder="<?php _e('Your search'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
-					<button class="button ripple green-button" type="submit">Search</button>
-				<?php endif;?>
-			</form>
-		</div>
