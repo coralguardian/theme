@@ -53,6 +53,18 @@
 			fbq('init', '693436517874437');
 			fbq('track', 'PageView');
 		</script>
+
+		<script>
+			window.axeptioSettings = {
+			clientId: "655b35341a349f6efee92544",
+			};
+			
+			(function(d, s) {
+			var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+			e.async = true; e.src = "//static.axept.io/sdk.js";
+			t.parentNode.insertBefore(e, t);
+			})(document, "script");
+		</script>
 		<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=693436517874437&ev=PageView&noscript=1"/></noscript>
 		<!-- End Facebook Pixel Code -->
 
