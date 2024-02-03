@@ -22,8 +22,12 @@
 					<div class="slider-el">
 						<div class="el-inner">
 							<div class="inner-content">
-								<span class="content-title"><?php  the_sub_field('titre'); ?></span>
-								<span class="content-legende"><?php  the_sub_field('legende'); ?></span>
+								<span class="content-title">
+									<?php  the_sub_field('titre'); ?>
+								</span>
+								<div class="content-legende cbo-cms">
+									<?php  the_sub_field('legende'); ?>
+								</div>
 							</div>
 							<div class="inner-picture cbo-picture-cover">
 								<img
