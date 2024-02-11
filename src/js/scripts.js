@@ -97,10 +97,10 @@ $(document).ready(function() {
 
 		$section.find(".cg-onglet_title").removeClass("active");
 		$section.find(".cg-onglets_content").removeClass("active");
-		$section.find(".onglet-pic").removeClass("active toto");
+		$section.find(".onglet-pic").removeClass("active");
 
 		$this.addClass("active");
-		jQuery("#pic_"+tabId).addClass("active toto");
+		jQuery("#pic_"+tabId).addClass("active");
 		jQuery("#contenu_"+tabId).addClass("active");
 	});
 

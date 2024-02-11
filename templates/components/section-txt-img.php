@@ -27,7 +27,7 @@
 			<?php endif; ?>
 
 			<div class="sectiontxtimg-container pic-<?php echo $picpos ?>">
-				<div class="container-picture cbo-picture-cover  slide-<?php echo $animpic ?>">
+				<figure class="container-picture cbo-picture-cover  slide-<?php echo $animpic ?>">
 					<img
 						src="<?php echo $pic['sizes']['large']; ?>"
 						srcset="<?php echo $pic['sizes']['small'] ?> 320w, <?php echo $pic['sizes']['small'] ?> 768w, <?php echo $pic['sizes']['large'] ?> 1024w, <?php echo $pic['sizes']['large'] ?> 1280w"
@@ -35,7 +35,10 @@
 						loading="lazy"
 						width="500px" height="1000px"
 					>
-				</div>
+					<figcaption>
+						<?php echo $pic["alt"]; ?>
+					</figcaption>
+				</figure>
 
 				<div class="container-txt cbo-cms slide-<?php echo $animtxt ?>" >
 					<?php echo $txt ?>
